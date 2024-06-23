@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="XEYE">
+    
+    <!-- 태그 최신 정보 목록 -->
+    <select id="getTagCurrentInfoList" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+        SELECT TAG.EQUIP_SEQ
+              ,TAG.TAG_SEQ
+              ,TAG.CURRENT_STATUS
+              ,IF(ISNULL(ERR.TAG_ERR_HISTORY_SEQ), '0', '1') AS ERR_STATUS
+              ,ALARM_SEND_YN
+        FROM
+        (
+         SELECT B.EQUIP_SEQ
+               ,B.TAG_SEQ
+               ,B.CURRENT_STATUS
+               ,B.ALARM_SEND_YN
+         FROM EQUIP A, TAG B
+         WHERE (B.ANALOG_INPUT_YN = 'Y' OR B.DIGITAL_INPUT_YN = 'Y')
+         AND B.MONITORING_YN = 'Y'
+         AND B.USE_YN = 'Y'
+         AND A.USE_YN = 'Y'
+         AND A.EQUIP_SEQ = B.EQUIP_SEQ
+	    ) AS TAG
+	    LEFT OUTER JOIN
+	    (
+		 SELECT MAX(TAG_ERR_HISTORY_SEQ) AS TAG_ERR_HISTORY_SEQ
+		       ,EQUIP_SEQ
+		       ,TAG_SEQ
+		 FROM TAG_ERR_HISTORY
+		 WHERE AUTO_RECOVERY_YN = 'N'
+		 GROUP BY EQUIP_SEQ, TAG_SEQ
+	    ) AS ERR ON (ERR.EQUIP_SEQ = TAG.EQUIP_SEQ AND ERR.TAG_SEQ = TAG.TAG_SEQ)
+	    GROUP BY TAG.EQUIP_SEQ, TAG.TAG_SEQ
+	    ORDER BY TAG.EQUIP_SEQ, TAG.TAG_SEQ ASC
+	</select>
+	
+	<!-- Analog 데이터 이력 저장 -->
+	<insert id="insertAnalogTagData" parameterClass="java.util.Map">
+		INSERT INTO TAG_DATA_HISTORY
+		(   todays
+		   ,EQUIP_SEQ
+		   ,TAG_SEQ
+		   ,TAG_STATUS
+		   ,ANALOG_NORMAL_FROM
+		   ,ANALOG_NORMAL_TO
+		   ,RECV_DATE
+		   ,REG_DATE
+		)
+		VALUES
+		(
+		    to_days(now())
+		   ,#equip_seq#
+		   ,#tag_seq#
+		   ,FORMAT(#tag_status#, 2)
+		   ,#analog_normal_from#
+		   ,#analog_normal_to#
+		   ,#recv_date#
+		   ,now()
+		)
+	</insert>
+	
+	<select id="getTagErrHistorySeq" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+		select
+			tag_err_history_seq, 
+			equip_seq, 
+			tag_seq, 
+			tag_critical_seq, 
+			tag_status, 
+			alarm_grade_cd, 
+			sms_yn, 
+			sms_r_yn,
+			auto_recovery_yn
+		from tag_err_history
+		where sms_yn = 'N'
+		union
+		select
+			tag_err_history_seq, 
+			equip_seq, 
+			tag_seq, 
+			tag_critical_seq, 
+			tag_status, 
+			alarm_grade_cd, 
+			sms_yn, 
+			sms_r_yn,
+			auto_recovery_yn
+		from tag_err_history
+		where sms_r_yn = 'N' and auto_recovery_yn='Y'
+	</select>
+	
+	<!-- Digital 데이터 이력 저장 -->
+	<insert id="insertDigitalTagData" parameterClass="java.util.Map">
+		INSERT INTO TAG_DATA_HISTORY
+		(  
+		   todays
+		   , EQUIP_SEQ
+		   ,TAG_SEQ
+		   ,TAG_STATUS
+		   ,DIGITAL_NORMAL
+		   ,RECV_DATE
+		   ,REG_DATE
+		)
+		VALUES
+		(
+		    to_days(now())
+		   ,#equip_seq#
+		   ,#tag_seq#
+		   ,#tag_status#
+		   ,#digital_normal#
+		   ,#recv_date#
+		   ,now()
+		)
+	</insert>
+	
+	<!-- Analog 장애 이력 저장 -->
+	<insert id="insertAnalogTagErr" parameterClass="java.util.Map">
+		INSERT INTO TAG_ERR_HISTORY
+		(
+			EQUIP_SEQ
+		   ,TAG_SEQ
+		   ,TAG_CRITICAL_SEQ
+		   ,TAG_STATUS
+		   ,ALARM_GRADE_CD
+		   ,ANALOG_NORMAL_FROM
+		   ,ANALOG_NORMAL_TO
+		   ,FIRST_ERR_DATE
+		   ,NEXT_ERR_DATE
+		   ,ERR_CNT
+		   ,AUTO_RECOVERY_YN
+		   ,REG_DATE
+		   ,SMS_SEND_YN
+		)
+		SELECT
+			#equip_seq#
+		   ,#tag_seq#
+		   ,#tag_critical_seq#
+		   ,FORMAT(#tag_status#, 2)
+		   ,#alarm_grade_cd#
+		   ,#analog_normal_from#
+		   ,#analog_normal_to#
+		   ,#first_err_date#
+		   ,#first_err_date#
+		   ,1
+		   ,'N'
+		   ,now()
+		   ,ALARM_SEND_YN
+		  FROM TAG
+		 WHERE TAG_SEQ = #tag_seq#
+	</insert>
+	
+	<!-- Digital 장애 이력 저장 -->
+	<insert id="insertDigitalTagErr" parameterClass="java.util.Map">
+		INSERT INTO TAG_ERR_HISTORY
+		(
+			EQUIP_SEQ
+		   ,TAG_SEQ
+		   ,TAG_CRITICAL_SEQ
+		   ,TAG_STATUS
+		   ,ALARM_GRADE_CD
+		   ,DIGITAL_NORMAL
+		   ,FIRST_ERR_DATE
+		   ,NEXT_ERR_DATE
+		   ,ERR_CNT
+		   ,AUTO_RECOVERY_YN
+		   ,REG_DATE
+		   ,SMS_SEND_YN
+		)
+		SELECT
+			#equip_seq#
+		   ,#tag_seq#
+		   ,#tag_critical_seq#
+		   ,#tag_status#
+		   ,#alarm_grade_cd#
+		   ,#digital_normal#
+		   ,#first_err_date#
+		   ,#first_err_date#
+		   ,1
+		   ,'N'
+		   ,now()
+		   ,ALARM_SEND_YN
+		  FROM TAG
+		 WHERE TAG_SEQ = #tag_seq#
+	</insert>
+	
+	<!-- snmp 통신장애 장애이력 저장 -->
+	<insert id="insertComErr" parameterClass="java.util.Map">
+		INSERT INTO TAG_ERR_HISTORY
+		(
+			EQUIP_SEQ
+		   ,TAG_SEQ
+		   ,TAG_CRITICAL_SEQ
+		   ,TAG_STATUS
+		   ,ALARM_GRADE_CD
+		   ,FIRST_ERR_DATE
+		   ,NEXT_ERR_DATE
+		   ,ERR_CNT
+		   ,AUTO_RECOVERY_YN
+		   ,REG_DATE
+		)
+		VALUES
+		(
+			#EQUIP_SEQ#
+		   ,#TAG_SEQ#
+		   ,#TAG_CRITICAL_SEQ#
+		   ,'1'
+		   ,#ALARM_GRADE_CD#
+		   ,#first_err_date#
+		   ,#first_err_date#
+		   ,1
+		   ,'N'
+		   ,now()
+		)
+	</insert>
+	
+	<!-- Analog 장애 이력 수정 -->
+	<update id="updateAnalogTagErr" parameterClass="java.util.Map">
+	<!-- 
+		UPDATE TAG_ERR_HISTORY SET TAG_CRITICAL_SEQ = #tag_critical_seq#
+		                          ,TAG_STATUS       = FORMAT(#tag_status#, 2)
+					              ,ALARM_GRADE_CD   = #alarm_grade_cd#
+		                          ,NEXT_ERR_DATE    = #next_err_date#
+		                          ,ERR_CNT          = ERR_CNT + 1
+		                          ,SMS_YN           = 'N'
+		                          ,SMS_SEND_DATE    = ''
+		WHERE TAG_ERR_HISTORY_SEQ = (
+									 SELECT A.TAG_ERR_HISTORY_SEQ
+									 FROM
+									 (
+									     SELECT MAX(TAG_ERR_HISTORY_SEQ) AS TAG_ERR_HISTORY_SEQ
+									     FROM TAG_ERR_HISTORY
+									     WHERE TAG_SEQ = #tag_seq#
+								     ) A
+                            		)
+	-->
+	
+		UPDATE TAG_ERR_HISTORY C,
+			(
+				SELECT TAG_ERR_HISTORY_SEQ
+				      ,#tag_critical_seq# AS TAG_CRITICAL_SEQ
+				      ,FORMAT(#tag_status#, 2) AS TAG_STATUS
+				      ,#alarm_grade_cd# ALARM_GRADE_CD
+				      ,#next_err_date# AS NEXT_ERR_DATE
+				      ,(ERR_CNT + 1) AS ERR_CNT
+				      ,IF(TAG_CRITICAL_SEQ=#tag_critical_seq#, SMS_YN, 'N') AS SMS_YN
+				      ,IF(TAG_CRITICAL_SEQ=#tag_critical_seq#, SMS_SEND_DATE, NULL) AS SMS_SEND_DATE
+				  FROM TAG_ERR_HISTORY
+				 WHERE TAG_ERR_HISTORY_SEQ = (              		
+								 SELECT A.TAG_ERR_HISTORY_SEQ
+								 FROM
+								 (
+								     SELECT MAX(TAG_ERR_HISTORY_SEQ) AS TAG_ERR_HISTORY_SEQ
+								     FROM TAG_ERR_HISTORY
+								     WHERE TAG_SEQ = #tag_seq#
+								 ) A
+			    )
+			) B
+		SET C.TAG_CRITICAL_SEQ = B.TAG_CRITICAL_SEQ
+		   ,C.TAG_STATUS = B.TAG_STATUS
+		   ,C.ALARM_GRADE_CD = B.ALARM_GRADE_CD
+		   ,C.NEXT_ERR_DATE = B.NEXT_ERR_DATE
+		   ,C.ERR_CNT = B.ERR_CNT
+		   ,C.SMS_YN = B.SMS_YN
+		   ,C.SMS_SEND_DATE = B.SMS_SEND_DATE
+		 WHERE C.TAG_ERR_HISTORY_SEQ = B.TAG_ERR_HISTORY_SEQ
+	</update>
+	
+	<!-- Digital 장애 이력 수정 -->
+	<update id="updateDigitalTagErr" parameterClass="java.util.Map">
+		UPDATE TAG_ERR_HISTORY SET TAG_CRITICAL_SEQ = #tag_critical_seq#
+		                          ,TAG_STATUS       = #tag_status#
+					              ,ALARM_GRADE_CD   = #alarm_grade_cd#
+		                          ,NEXT_ERR_DATE    = #next_err_date#
+		                          ,ERR_CNT          = ERR_CNT + 1
+		WHERE TAG_ERR_HISTORY_SEQ = (
+								     SELECT A.TAG_ERR_HISTORY_SEQ
+									 FROM
+									 (
+									     SELECT MAX(TAG_ERR_HISTORY_SEQ) AS TAG_ERR_HISTORY_SEQ
+									     FROM TAG_ERR_HISTORY
+									     WHERE TAG_SEQ = #tag_seq#
+								     ) A
+                            		)
+	</update>
+	
+	<!-- Analog 장애 이력 복구 -->
+	<update id="updateAnalogTagErrRecovery" parameterClass="java.util.Map">
+		<!--
+		UPDATE TAG_ERR_HISTORY SET AUTO_RECOVERY_STATUS = FORMAT(#auto_recovery_status#, 2)
+		                          ,AUTO_RECOVERY_YN     = 'Y'
+		                          ,AUTO_RECOVERY_DATE   = #auto_recovery_date#
+		WHERE TAG_ERR_HISTORY_SEQ = (
+								     SELECT A.TAG_ERR_HISTORY_SEQ
+									 FROM
+									 (
+									     SELECT MAX(TAG_ERR_HISTORY_SEQ) AS TAG_ERR_HISTORY_SEQ
+									     FROM TAG_ERR_HISTORY
+									     WHERE TAG_SEQ = #tag_seq#
+								     ) A
+                            		)
+        -->
+        UPDATE TAG_ERR_HISTORY D,       
+		       (   
+				SELECT A.TAG_ERR_HISTORY_SEQ
+				      ,FORMAT(#auto_recovery_status#, 2) AS AUTO_RECOVERY_STATUS
+				      ,'Y' AS AUTO_RECOVERY_YN
+				      ,#auto_recovery_date# AS AUTO_RECOVERY_DATE
+				      ,CASE WHEN B.EX1 = 'Y' AND (A.SMS_YN IS NULL OR A.SMS_YN = 'N') THEN 'Y'
+					        ELSE A.SMS_YN
+				       END AS SMS_YN
+				      ,CASE WHEN B.EX1 = 'Y' THEN 'Y'
+					        ELSE 'N'
+				       END AS SMS_SEND_YN
+				  FROM TAG_ERR_HISTORY A, EQUIP B
+				 WHERE A.EQUIP_SEQ = B.EQUIP_SEQ
+				   AND A.TAG_ERR_HISTORY_SEQ = (SELECT MAX(TAG_ERR_HISTORY_SEQ) AS TAG_ERR_HISTORY_SEQ
+								  FROM TAG_ERR_HISTORY
+								 WHERE TAG_SEQ = #tag_seq#)
+			   ) C
+		   SET D.AUTO_RECOVERY_STATUS = C.AUTO_RECOVERY_STATUS
+		      ,D.AUTO_RECOVERY_YN = C.AUTO_RECOVERY_YN
+		      ,D.AUTO_RECOVERY_DATE = C.AUTO_RECOVERY_DATE
+		      ,D.SMS_YN = C.SMS_YN
+		      ,D.SMS_SEND_YN = C.SMS_SEND_YN
+		WHERE D.TAG_ERR_HISTORY_SEQ = C.TAG_ERR_HISTORY_SEQ
+	</update>
+	
+	<!-- Digital 장애 이력 복구 -->
+	<update id="updateDigitalTagErrRecovery" parameterClass="java.util.Map">
+		<!--
+		UPDATE TAG_ERR_HISTORY SET AUTO_RECOVERY_STATUS = #auto_recovery_status#
+		                          ,AUTO_RECOVERY_YN     = 'Y'
+		                          ,AUTO_RECOVERY_DATE   = #auto_recovery_date#
+		WHERE TAG_ERR_HISTORY_SEQ = (
+								     SELECT A.TAG_ERR_HISTORY_SEQ
+									 FROM
+									 (
+									     SELECT MAX(TAG_ERR_HISTORY_SEQ) AS TAG_ERR_HISTORY_SEQ
+									     FROM TAG_ERR_HISTORY
+									     WHERE TAG_SEQ = #tag_seq#
+								     ) A
+                            		)
+        -->
+        UPDATE TAG_ERR_HISTORY D,       
+		       (   
+				SELECT A.TAG_ERR_HISTORY_SEQ
+				      ,#auto_recovery_status# AS AUTO_RECOVERY_STATUS
+				      ,'Y' AS AUTO_RECOVERY_YN
+				      ,#auto_recovery_date# AS AUTO_RECOVERY_DATE
+				      ,CASE WHEN B.EX1 = 'Y' AND (A.SMS_YN IS NULL OR A.SMS_YN = 'N') THEN 'Y'
+					        ELSE A.SMS_YN
+				       END AS SMS_YN
+				      ,CASE WHEN B.EX1 = 'Y' THEN 'Y'
+					        ELSE 'N'
+				       END AS SMS_SEND_YN
+				  FROM TAG_ERR_HISTORY A, EQUIP B
+				 WHERE A.EQUIP_SEQ = B.EQUIP_SEQ
+				   AND A.TAG_ERR_HISTORY_SEQ = (SELECT MAX(TAG_ERR_HISTORY_SEQ) AS TAG_ERR_HISTORY_SEQ
+								  FROM TAG_ERR_HISTORY
+								 WHERE TAG_SEQ = #tag_seq#)
+			   ) C
+		   SET D.AUTO_RECOVERY_STATUS = C.AUTO_RECOVERY_STATUS
+		      ,D.AUTO_RECOVERY_YN = C.AUTO_RECOVERY_YN
+		      ,D.AUTO_RECOVERY_DATE = C.AUTO_RECOVERY_DATE
+		      ,D.SMS_YN = C.SMS_YN
+		      ,D.SMS_SEND_YN = C.SMS_SEND_YN
+		WHERE D.TAG_ERR_HISTORY_SEQ = C.TAG_ERR_HISTORY_SEQ
+	</update>
+	<!-- snmp 통신불량 TAG_STATUS 복구 -->
+	<update id="updateTagStatusErrRecovery" parameterClass="java.util.Map">
+		UPDATE TAG SET TAG_STATUS = '0'
+		WHERE TAG_SEQ = #TAG_SEQ#
+	</update>
+	<!-- 장애 발생한 태그에 대한 정보 선택 -->
+	<select id="getTagErrCom" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+		SELECT A.EQUIP_SEQ
+			, A.TAG_SEQ
+			, B.TAG_CRITICAL_SEQ
+			, B.ALARM_GRADE_CD
+			, C.TAG_STATUS
+			, C.AUTO_RECOVERY_YN
+			, A.CURRENT_STATUS
+		FROM TAG A, TAG_CRITICAL B, TAG_ERR_HISTORY C
+		WHERE A.TAG_SEQ = B.TAG_SEQ
+		AND B.TAG_SEQ = C.TAG_SEQ
+		AND A.TAG_ID = '9'
+		AND (B.ALARM_GRADE_CD IS NOT NULL AND B.ALARM_GRADE_CD != '')
+		AND C.EQUIP_SEQ = #equip_seq#
+		LIMIT 1;
+	</select>
+	<!-- 장애 발생한 태그에 대한 정보 선택 -->
+	<select id="getTagErrCom2" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+		SELECT A.EQUIP_SEQ
+			, A.TAG_SEQ
+			, B.TAG_CRITICAL_SEQ
+			, B.ALARM_GRADE_CD
+			, A.CURRENT_STATUS
+			, C.NODE_SEQ
+		FROM TAG A, TAG_CRITICAL B, EQUIP C
+		WHERE A.TAG_SEQ = B.TAG_SEQ
+		AND A.EQUIP_SEQ = C.EQUIP_SEQ
+		AND A.TAG_ID = '9'
+		AND A.EQUIP_SEQ = #equip_seq#
+		AND (B.ALARM_GRADE_CD IS NOT NULL AND B.ALARM_GRADE_CD != '')
+		LIMIT 1;
+	</select>
+	<!-- 장애 발생한 태그에 대한 정보 선택 -->
+	<select id="getErrCheck" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+		SELECT TAG_ERR_HISTORY_SEQ
+ 		  FROM TAG_ERR_HISTORY
+		 WHERE EQUIP_SEQ = #equip_seq#
+		   AND TAG_SEQ = #tag_seq#
+		   AND AUTO_RECOVERY_YN = 'N'
+	</select>
+	<!-- 태그 최신 상태 값 변경 -->
+	<update id="updateTagCurrentStatus" parameterClass="java.util.Map">
+		UPDATE TAG 
+		   SET CURRENT_STATUS = #tag_status#
+		      ,REG_DATE = now()
+		 WHERE TAG_SEQ     = #tag_seq#
+	</update>
+	<!-- 태그 RTU NULL 처리 -->
+	<update id="updateRTUNull" parameterClass="java.util.Map">
+		UPDATE TAG
+  		   SET CURRENT_STATUS = #tag_status#,
+       		   REG_DATE = NOW()
+ 		 WHERE TAG_SEQ = #tag_seq#
+	</update>
+	<!-- 태그 SNMP NULL 처리 -->
+	<update id="updateSNMPNull" parameterClass="java.util.Map">
+		UPDATE TAG
+  		   SET CURRENT_STATUS = #tag_status#,
+       		   REG_DATE = NOW()
+ 		 WHERE TAG_SEQ = #tag_seq#
+	</update>
+	<!-- 통신 불량 시 태그 최신 값 공백 처리 -->
+	<update id="tagNullCurrentStatus" parameterClass="java.util.Map">
+		UPDATE TAG 
+		   SET CURRENT_STATUS = NULL
+		      ,REG_DATE = now()
+		 WHERE CHAR_LENGTH(TAG_ID) > 5
+		   AND EQUIP_SEQ = #EQUIP_SEQ#
+		   AND ANALOG_INPUT_YN = 'Y' 
+	</update>
+	<!-- snmp 통신 장애 발생 시 통신 장애 태그에 장애 발생 시키기 -->
+	<update id="snmpComErr" parameterClass="java.util.Map">
+		UPDATE TAG 
+		   SET CURRENT_STATUS = '1'
+		      ,REG_DATE = now()
+		 WHERE EQUIP_SEQ     = #EQUIP_SEQ#
+		 AND TAG_ID = '9'
+	</update>
+	<!-- snmp 통신 장애 발생 시 통신 장애 태그에 장애 발생 시키기 -->
+	<update id="snmpComErrRestore" parameterClass="java.util.Map">
+		UPDATE TAG 
+		   SET CURRENT_STATUS = '0'
+		      ,REG_DATE = now()
+		 WHERE EQUIP_SEQ     = #EQUIP_SEQ#
+		 AND TAG_ID = '9'
+	</update>
+	<!-- RTU 통신 불량 시 태그 최신 값 공백 처리 -->
+	<update id="rtuNullCurrentStatus" parameterClass="java.util.Map">
+		UPDATE TAG
+		   SET CURRENT_STATUS = NULL
+		 WHERE CHAR_LENGTH(TAG_ID) = 5
+		   AND ANALOG_INPUT_YN = 'Y'
+		   AND EQUIP_SEQ IN (
+		   	   SELECT EQUIP_SEQ
+		   	     FROM EQUIP
+		   	    WHERE NODE_SEQ = #NODE_SEQ#
+		    )
+	</update>
+	<!-- 장애 태그 초기화 -->
+	<update id="updateTagInitErr" parameterClass="java.util.Map">
+		UPDATE TAG 
+		   SET CURRENT_STATUS = #tag_status#
+		      ,REG_DATE = now()
+		 WHERE EQUIP_SEQ = #equip_seq#
+		   AND TAG_SEQ     = #tag_seq#
+	</update>
+	
+	<!-- 태그 트랜드 데이터 -->
+    <insert id="insertTagDataTrend" parameterClass="java.util.Map">
+        INSERT INTO TAG_DATA_TREND
+        (   
+            TAG_SEQ
+           ,EQUIP_SEQ
+           ,REG_DATE
+           ,TAG_STATUS
+        )
+        VALUES
+        (
+            #tag_seq#
+           ,#equip_seq#
+           ,SYSDATE()
+           ,#tag_status#
+        )
+    </insert>
+    
+    <!-- tag_err_history tbl의  max tag_err_history_seq 가져오기 -->
+    <select id="getMaxAlarmSeq" parameterClass="java.util.Map" resultClass="int">
+	    SELECT MAX(tag_err_history_seq) as maxAlarmSeq 
+          FROM TAG_ERR_HISTORY
+         WHERE tag_seq = #tag_seq#
+           AND first_err_date = next_err_date 
+           AND auto_recovery_yn = 'N'
+    </select>
+    
+    <!-- 이벤트 알람 메세지 만들기 -->
+    <select id="getAlarmMsg" parameterClass="java.util.Map" resultClass="String">
+	    SELECT if(T.TAG_ID = '9', TC.TAG_MESSAGE, CONCAT(RIGHT(TC.TAG_MESSAGE, 2), ': ', #tag_status#, ' ', T.UNIT, ' (', T.ANALOG_NORMAL_FROM, '~', T.ANALOG_NORMAL_TO, ')') ) AS msg 
+          FROM TAG T, TAG_CRITICAL TC
+         WHERE T.TAG_SEQ = TC.TAG_SEQ
+           AND TC.TAG_SEQ = #tag_seq#
+           AND TC.TAG_CRITICAL_SEQ = #tag_critical_seq#
+    </select>
+    
+    <select id="getNames" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+    	SELECT T.TAG_NM, EQ.EQUIP_NM, MT.NODE_NM
+    	  FROM TAG T, EQUIP EQ, MONITORING_TREE MT
+    	 WHERE T.EQUIP_SEQ = EQ.EQUIP_SEQ
+    	   AND MT.NODE_SEQ = EQ.NODE_SEQ
+    	   AND EQ.EQUIP_SEQ = #equip_seq#
+    	   AND T.TAG_SEQ = #tag_seq#
+    </select>
+    
+    <select id="getAlarmGrade" parameterClass="java.util.Map" resultClass="java.lang.String">
+		select
+			case
+				when alarm_grade_nm='Warning' then '2'
+				when alarm_grade_nm='Major' then '3'
+				when alarm_grade_nm='Critial' then '4'
+				else '1'
+			end as alarm_grade
+		from alarm_grade
+		where alarm_grade_cd=#alarm_grade_cd#
+    </select>
+    
+    <select id="getEventMsg" parameterClass="java.util.Map" resultClass="java.lang.String">
+		select tag_message from tag_critical where tag_critical_seq=#tag_critical_seq# and tag_seq=#tag_seq#
+    </select>
+    
+    <select id="getEventType" parameterClass="java.util.Map" resultClass="java.lang.String">
+    	select
+			concat(mt.node_nm, '-', eq.equip_nm, '-', tag_nm) as event_type
+		from tag tg
+		left outer join equip eq
+		on tg.equip_seq = eq.equip_seq
+		left outer join monitoring_tree mt
+		on mt.node_seq = eq.node_seq
+		where tg.tag_seq=#tag_seq#
+    </select>
+    
+    <update id="updateSMSSendStatus" parameterClass="java.util.Map">
+    	update tag_err_history set
+    	<isEqual property="sms_yn" compareValue="N">
+    	sms_yn='Y', sms_send_date=sysdate()
+    	</isEqual>
+    	<isEqual property="sms_yn" compareValue="Y">
+    	sms_r_yn='Y', sms_r_send_date=sysdate()
+    	</isEqual>
+    	where tag_err_history_seq=#tag_err_history_seq#
+    </update>
+</sqlMap>

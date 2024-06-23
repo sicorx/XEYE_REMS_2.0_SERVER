@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="xeye-server" default="all" basedir=".">
+<target name="init">
+    <property name="name" value="xeye-server" />
+    <property name="version" value="1.0" />
+	<property name="base.dir" location="." />
+    <property name="src.dir" location="./src" />
+    <property name="build.dir" location="./build" />
+	<property name="deploy.dir" location="./xeye_server" />
+	<property name="resource.dir" location="./resource" />
+    <property name="lib.dir" location="./resource/lib" />
+    <property name="jar.file" value="${name}.jar" />
+</target>
+
+<!-- ====================================================== -->
+<!--                                                        -->
+<!-- Clean                                                  -->
+<!--                                                        -->
+<!-- ====================================================== -->
+<target name="clean">
+    <delete dir="${build.dir}" />
+	<delete dir="${deploy.dir}" />
+</target>
+
+<!-- ===================================================== -->
+<!--    compile target : JAVA 파일을 컴파일 한다.              -->
+<!-- ===================================================== -->
+<target name="compile" depends="init">
+    <mkdir dir="${build.dir}" />
+    <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="true" encoding="UTF-8">
+        <classpath>
+        	<pathelement location="${lib.dir}/commons-beanutils-1.9.2.jar" />
+        	<pathelement location="${lib.dir}/commons-codec-1.8.jar" />
+            <pathelement location="${lib.dir}/commons-collections-3.2.1.jar" />
+            <pathelement location="${lib.dir}/commons-lang.jar" />
+            <pathelement location="${lib.dir}/commons-logging.jar" />
+        	<pathelement location="${lib.dir}/commons-dbcp.jar" />
+            <pathelement location="${lib.dir}/commons-pool.jar" />
+        	<pathelement location="${lib.dir}/ezmorph-1.0.6.jar" />
+        	<pathelement location="${lib.dir}/ibatis-2.3.4.726.jar" />
+        	<pathelement location="${lib.dir}/json-lib.jar" />
+            <pathelement location="${lib.dir}/log4j-1.2.15.jar" />
+        	<pathelement location="${lib.dir}/mysql-connector-java-5.0.8-bin.jar" />
+        	<pathelement location="${lib.dir}/slf4j-api-1.7.7.jar" />
+        	<pathelement location="${lib.dir}/snmp4j-2.4.1.jar" />
+        </classpath>
+    </javac>
+    
+    <copy todir="${build.dir}">
+        <fileset dir="${src.dir}">
+        	<exclude name="**/*.java"/>
+        	<exclude name="**/log4j.xml"/>
+        </fileset>
+    </copy>
+	
+	<delete dir="${build.dir}/com/hoonit/xeye/test" />
+	
+    <echo message="source compiled successfully ..."/>
+</target>
+
+<!-- ===================================================== -->
+<!--          jar 압축 : EJB 파일을 jar로 압축한다.           -->
+<!-- ===================================================== -->
+<target name="jar" depends="init">
+    <jar jarfile="${lib.dir}/${jar.file}" basedir="${build.dir}" />
+    <echo message="jar successfully ..."/>
+</target>
+	
+<!-- ===================================================== -->
+<!--          deploy : XEYE 폴더에 관련 파일을 복사한다.         -->
+<!-- ===================================================== -->
+<target name="deploy" depends="init">
+	
+	<copy todir="${deploy.dir}/resource">
+		<fileset dir="${resource.dir}" />
+    </copy>
+	
+	<copy todir="${deploy.dir}">
+		<fileset dir="${base.dir}">
+          	<include name="log4j.xml"/>
+			<include name="start.cmd"/>
+          	<include name="stop.cmd"/>
+			<include name="start.sh"/>
+			<include name="stop.sh"/>
+        </fileset>
+    </copy>
+	
+    <echo message="deploy successfully ..."/>
+</target>
+
+<!-- ====================================================== -->
+<!--                                                        -->
+<!-- All                                                    -->
+<!--                                                        -->
+<!-- ====================================================== -->
+<target name="all">
+	<antcall target="clean" />
+    <antcall target="compile" />
+    <antcall target="jar" />
+	<antcall target="deploy" />
+</target>
+</project>

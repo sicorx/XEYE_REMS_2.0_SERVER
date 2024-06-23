@@ -1,0 +1,27 @@
+17-04-24 16:18:17,934 ClientHandlerThread INFO  Client is started
+17-04-24 16:18:17,968 ClientHandlerThread INFO  read length : 50
+17-04-24 16:18:17,970 ClientHandlerThread DEBUG STX=02
+17-04-24 16:18:17,971 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:18:17,971 ClientHandlerThread DEBUG LEN=2e
+17-04-24 16:18:17,972 ClientHandlerThread DEBUG DATA CRC=17306
+17-04-24 16:18:17,973 ClientHandlerThread DEBUG CHEC CRC=17306
+17-04-24 16:18:17,973 ClientHandlerThread DEBUG CMD=01
+17-04-24 16:18:17,974 ClientHandlerThread INFO  Client 접속 정보 수신
+17-04-24 16:18:17,977 ClientHandlerThread INFO  Version=1.0
+17-04-24 16:18:17,978 ClientHandlerThread INFO  IP=192.168.10.26
+17-04-24 16:18:17,978 ClientHandlerThread INFO  MAC=B8-27-EB-F5-43-E4
+17-04-24 16:18:17,979 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:18:17,979 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:18:18,269 ClientHandlerThread INFO  Client 접속 정보 수신 결과 전송
+17-04-24 16:18:18,270 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:18:18,270 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:18:18,272 ClientHandlerThread INFO  Connected client size : 0
+17-04-24 16:18:18,272 ClientHandlerThread INFO  Write data : 02 00 4c 01 01 30 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 06 0f 10 14 00 00 65 90 00 01 01 01 01 03 03 02 02 03 03 01 01 18 18 17 16 16 16 16 16 17 18 19 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2d 50 03 
+17-04-24 16:18:18,273 ClientHandlerThread INFO  Client is closed
+17-04-24 16:18:18,274 ClientHandlerThread ERROR 
+java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:270)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:479)
+	at com.hoonit.xeye.net.server.gw.ClientHandlerThread.write(Unknown Source)
+	at com.hoonit.xeye.net.server.gw.ClientHandlerThread.access$400(Unknown Source)
+	at com.hoonit.xeye.net.server.gw.ClientHandlerThread$8.run(Unknown Source)

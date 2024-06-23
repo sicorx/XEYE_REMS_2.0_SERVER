@@ -1,0 +1,120 @@
+17-04-21 15:18:22,825 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-21 15:18:22,828 NotifyServer INFO  Notify Server is waiting for accept
+17-04-21 15:44:20,680 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-21 15:44:20,683 NotifyServer INFO  Notify Server is waiting for accept
+17-04-21 15:46:50,901 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-21 15:46:50,905 NotifyServer INFO  Notify Server is waiting for accept
+17-04-21 16:39:11,682 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-21 16:39:11,685 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 10:50:07,200 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 10:50:07,204 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 10:53:08,576 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 10:53:08,580 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 10:54:10,430 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 10:54:10,434 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 11:09:52,128 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 11:09:52,131 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 11:11:24,433 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 11:11:24,436 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 11:37:03,529 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 11:37:03,533 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 11:57:20,768 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 11:57:20,772 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 12:10:37,763 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 12:10:37,766 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 12:18:57,143 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 12:18:57,146 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 14:09:55,102 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 14:09:55,106 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 14:15:37,102 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 14:15:37,105 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 14:17:44,837 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 14:17:44,841 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 14:17:57,030 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 14:17:57,033 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 14:22:07,604 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 14:22:07,608 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 14:25:40,743 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 14:25:40,747 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 14:31:05,973 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 14:31:05,977 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 14:46:25,401 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 14:46:25,404 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 14:56:44,912 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 14:56:44,915 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 16:07:15,855 NotifyServer INFO  Notify Server accepted client : /127.0.0.1
+17-04-24 16:07:15,917 NotifyServer$Worker INFO  30 byte readed...
+17-04-24 16:07:15,918 NotifyServer$Worker DEBUG STX=02
+17-04-24 16:07:15,918 NotifyServer$Worker DEBUG ETX=03
+17-04-24 16:07:15,918 NotifyServer$Worker DEBUG LEN=1a
+17-04-24 16:07:15,919 NotifyServer$Worker DEBUG DATA CRC=24960
+17-04-24 16:07:15,919 NotifyServer$Worker DEBUG CHEC CRC=24960
+17-04-24 16:07:15,920 NotifyServer$Worker DEBUG CMD=08
+17-04-24 16:07:15,920 NotifyServer$Worker INFO  간판제어 수신
+17-04-24 16:07:15,921 NotifyServer$Worker INFO  STR CD=01
+17-04-24 16:07:15,921 NotifyServer$Worker INFO  GW ID=1
+17-04-24 16:07:15,922 NotifyServer$Worker INFO  The connection is released...
+17-04-24 16:09:01,916 NotifyServer INFO  Notify Server accepted client : /127.0.0.1
+17-04-24 16:09:01,923 NotifyServer$Worker INFO  30 byte readed...
+17-04-24 16:09:01,924 NotifyServer$Worker DEBUG STX=02
+17-04-24 16:09:01,924 NotifyServer$Worker DEBUG ETX=03
+17-04-24 16:09:01,925 NotifyServer$Worker DEBUG LEN=1a
+17-04-24 16:09:01,925 NotifyServer$Worker DEBUG DATA CRC=24960
+17-04-24 16:09:01,926 NotifyServer$Worker DEBUG CHEC CRC=24960
+17-04-24 16:09:01,926 NotifyServer$Worker DEBUG CMD=08
+17-04-24 16:09:01,926 NotifyServer$Worker INFO  간판제어 수신
+17-04-24 16:09:01,927 NotifyServer$Worker INFO  STR CD=01
+17-04-24 16:09:01,928 NotifyServer$Worker INFO  GW ID=1
+17-04-24 16:09:01,928 NotifyServer$Worker INFO  The connection is released...
+17-04-24 16:09:11,811 NotifyServer INFO  Notify Server accepted client : /127.0.0.1
+17-04-24 16:09:11,818 NotifyServer$Worker INFO  30 byte readed...
+17-04-24 16:09:11,819 NotifyServer$Worker DEBUG STX=02
+17-04-24 16:09:11,819 NotifyServer$Worker DEBUG ETX=03
+17-04-24 16:09:11,819 NotifyServer$Worker DEBUG LEN=1a
+17-04-24 16:09:11,820 NotifyServer$Worker DEBUG DATA CRC=24960
+17-04-24 16:09:11,820 NotifyServer$Worker DEBUG CHEC CRC=24960
+17-04-24 16:09:11,821 NotifyServer$Worker DEBUG CMD=08
+17-04-24 16:09:11,821 NotifyServer$Worker INFO  간판제어 수신
+17-04-24 16:09:11,822 NotifyServer$Worker INFO  STR CD=01
+17-04-24 16:09:11,822 NotifyServer$Worker INFO  GW ID=1
+17-04-24 16:09:11,823 NotifyServer$Worker INFO  The connection is released...
+17-04-24 16:09:37,381 NotifyServer INFO  Notify Server accepted client : /127.0.0.1
+17-04-24 16:09:37,391 NotifyServer$Worker INFO  30 byte readed...
+17-04-24 16:09:37,392 NotifyServer$Worker DEBUG STX=02
+17-04-24 16:09:37,392 NotifyServer$Worker DEBUG ETX=03
+17-04-24 16:09:37,392 NotifyServer$Worker DEBUG LEN=1a
+17-04-24 16:09:37,393 NotifyServer$Worker DEBUG DATA CRC=24960
+17-04-24 16:09:37,393 NotifyServer$Worker DEBUG CHEC CRC=24960
+17-04-24 16:09:37,394 NotifyServer$Worker DEBUG CMD=08
+17-04-24 16:09:37,394 NotifyServer$Worker INFO  간판제어 수신
+17-04-24 16:09:37,395 NotifyServer$Worker INFO  STR CD=01
+17-04-24 16:09:37,395 NotifyServer$Worker INFO  GW ID=1
+17-04-24 16:09:37,396 NotifyServer$Worker INFO  The connection is released...
+17-04-24 16:12:13,234 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 16:12:13,237 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 16:13:13,719 NotifyServer INFO  Notify Server accepted client : /127.0.0.1
+17-04-24 16:13:13,727 NotifyServer$Worker INFO  30 byte readed...
+17-04-24 16:13:13,728 NotifyServer$Worker DEBUG STX=02
+17-04-24 16:13:13,728 NotifyServer$Worker DEBUG ETX=03
+17-04-24 16:13:13,729 NotifyServer$Worker DEBUG LEN=1a
+17-04-24 16:13:13,730 NotifyServer$Worker DEBUG DATA CRC=24960
+17-04-24 16:13:13,730 NotifyServer$Worker DEBUG CHEC CRC=24960
+17-04-24 16:13:13,731 NotifyServer$Worker DEBUG CMD=08
+17-04-24 16:13:13,732 NotifyServer$Worker INFO  간판제어 수신
+17-04-24 16:13:13,732 NotifyServer$Worker INFO  STR CD=01
+17-04-24 16:13:13,733 NotifyServer$Worker INFO  GW ID=1
+17-04-24 16:13:13,735 NotifyServer$Worker INFO  The connection is released...
+17-04-24 16:17:58,245 NotifyServer INFO  Notify Server is started with 192.168.10.21:12200
+17-04-24 16:17:58,247 NotifyServer INFO  Notify Server is waiting for accept
+17-04-24 16:19:40,486 NotifyServer INFO  Notify Server accepted client : /127.0.0.1
+17-04-24 16:19:40,494 NotifyServer$Worker INFO  30 byte readed...
+17-04-24 16:19:40,494 NotifyServer$Worker DEBUG STX=02
+17-04-24 16:19:40,495 NotifyServer$Worker DEBUG ETX=03
+17-04-24 16:19:40,495 NotifyServer$Worker DEBUG LEN=1a
+17-04-24 16:19:40,496 NotifyServer$Worker DEBUG DATA CRC=24960
+17-04-24 16:19:40,496 NotifyServer$Worker DEBUG CHEC CRC=24960
+17-04-24 16:19:40,496 NotifyServer$Worker DEBUG CMD=08
+17-04-24 16:19:40,497 NotifyServer$Worker INFO  간판제어 수신
+17-04-24 16:19:40,497 NotifyServer$Worker INFO  STR CD=01
+17-04-24 16:19:40,498 NotifyServer$Worker INFO  GW ID=1
+17-04-24 16:19:40,500 NotifyServer$Worker INFO  The connection is released...

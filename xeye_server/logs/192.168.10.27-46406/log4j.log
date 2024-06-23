@@ -1,0 +1,29 @@
+17-04-24 11:11:26,309 ClientHandlerThread INFO  Client is started
+17-04-24 11:11:26,375 ClientHandlerThread INFO  read length : 50
+17-04-24 11:11:26,377 ClientHandlerThread DEBUG STX=02
+17-04-24 11:11:26,377 ClientHandlerThread DEBUG ETX=03
+17-04-24 11:11:26,378 ClientHandlerThread DEBUG LEN=2e
+17-04-24 11:11:26,379 ClientHandlerThread DEBUG DATA CRC=18207
+17-04-24 11:11:26,380 ClientHandlerThread DEBUG CHEC CRC=18207
+17-04-24 11:11:26,380 ClientHandlerThread DEBUG CMD=01
+17-04-24 11:11:26,381 ClientHandlerThread INFO  Client 접속 정보 수신
+17-04-24 11:11:26,384 ClientHandlerThread INFO  Version=1.0
+17-04-24 11:11:26,384 ClientHandlerThread INFO  IP=192.168.10.27
+17-04-24 11:11:26,385 ClientHandlerThread INFO  MAC=B8-27-EB-11-27-B8
+17-04-24 11:11:26,386 ClientHandlerThread INFO  STR CD=01
+17-04-24 11:11:26,386 ClientHandlerThread INFO  GW ID=1
+17-04-24 11:11:26,654 ClientHandlerThread INFO  Client 접속 정보 수신 결과 전송
+17-04-24 11:11:26,656 ClientHandlerThread INFO  Write data : 02 00 4c 01 01 30 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 06 0f 10 14 00 00 65 90 00 01 01 01 01 03 03 02 02 03 03 01 01 18 18 17 16 16 16 16 16 17 18 19 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2d 50 03 
+17-04-24 11:11:26,657 ClientHandlerThread INFO  Writed data length : 80
+17-04-24 11:11:59,089 ClientHandlerThread INFO  read length : 7
+17-04-24 11:11:59,090 ClientHandlerThread DEBUG STX=02
+17-04-24 11:11:59,090 ClientHandlerThread DEBUG ETX=03
+17-04-24 11:11:59,091 ClientHandlerThread DEBUG LEN=3
+17-04-24 11:11:59,091 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 11:11:59,091 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 11:11:59,092 ClientHandlerThread DEBUG CMD=00
+17-04-24 11:11:59,092 ClientHandlerThread INFO  Echo 수신
+17-04-24 11:11:59,094 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 11:11:59,094 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 11:12:08,754 ClientHandlerThread INFO  Connected client size : 0
+17-04-24 11:12:08,754 ClientHandlerThread INFO  Client is closed

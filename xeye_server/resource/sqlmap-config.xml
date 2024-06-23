@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+  <settings cacheModelsEnabled="true" 
+			enhancementEnabled="true" 
+			lazyLoadingEnabled="true" 
+			errorTracingEnabled="false" 
+			useStatementNamespaces="true" />
+
+	<transactionManager type="JDBC" commitRequired="false">
+    	<dataSource type="DBCP">
+      		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+      		<property name="url" value="jdbc:mysql://localhost:3306/rems?autoReconnect=true"/>
+      		<property name="username" value="remswas"/>
+      		<property name="password" value="#remsapp01"/>
+      		<property name="testWhileIdle" value="true"/>
+      		<property name="timeBetweenEvictionRunsMillis" value="30000"/>
+      		<property name="validationQuery" value="select 1"/>
+      		<property name="maximumWait" value="60000"/>
+      		<property name="maximumActiveConnections" value="200"/>
+      		<property name="maximumIdleConnections" value="100"/>
+    	</dataSource>
+  	</transactionManager>
+
+  	<!-- List the SQL Map XML files. They can be loaded from the classpath -->
+  	<!-- Common -->
+  	<sqlMap resource="com/hoonit/xeye/dao/sql/xeye_sql.xml" />
+  
+</sqlMapConfig>

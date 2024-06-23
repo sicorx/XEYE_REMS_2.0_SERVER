@@ -1,0 +1,39 @@
+17-04-24 14:16:06,392 ClientHandlerThread INFO  Client is started
+17-04-24 14:16:06,434 ClientHandlerThread INFO  read length : 50
+17-04-24 14:16:06,436 ClientHandlerThread DEBUG STX=02
+17-04-24 14:16:06,437 ClientHandlerThread DEBUG ETX=03
+17-04-24 14:16:06,437 ClientHandlerThread DEBUG LEN=2e
+17-04-24 14:16:06,438 ClientHandlerThread DEBUG DATA CRC=17306
+17-04-24 14:16:06,439 ClientHandlerThread DEBUG CHEC CRC=17306
+17-04-24 14:16:06,439 ClientHandlerThread DEBUG CMD=01
+17-04-24 14:16:06,440 ClientHandlerThread INFO  Client 접속 정보 수신
+17-04-24 14:16:06,443 ClientHandlerThread INFO  Version=1.0
+17-04-24 14:16:06,443 ClientHandlerThread INFO  IP=192.168.10.26
+17-04-24 14:16:06,444 ClientHandlerThread INFO  MAC=B8-27-EB-F5-43-E4
+17-04-24 14:16:06,444 ClientHandlerThread INFO  STR CD=01
+17-04-24 14:16:06,445 ClientHandlerThread INFO  GW ID=1
+17-04-24 14:16:06,715 ClientHandlerThread INFO  Client 접속 정보 수신 결과 전송
+17-04-24 14:16:06,718 ClientHandlerThread INFO  Write data : 02 00 4c 01 01 30 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 06 0f 10 14 00 00 65 90 00 01 01 01 01 03 03 02 02 03 03 01 01 18 18 17 16 16 16 16 16 17 18 19 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2d 50 03 
+17-04-24 14:16:06,719 ClientHandlerThread INFO  Writed data length : 80
+17-04-24 14:16:38,909 ClientHandlerThread INFO  read length : 7
+17-04-24 14:16:38,910 ClientHandlerThread DEBUG STX=02
+17-04-24 14:16:38,910 ClientHandlerThread DEBUG ETX=03
+17-04-24 14:16:38,911 ClientHandlerThread DEBUG LEN=3
+17-04-24 14:16:38,911 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 14:16:38,912 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 14:16:38,912 ClientHandlerThread DEBUG CMD=00
+17-04-24 14:16:38,912 ClientHandlerThread INFO  Echo 수신
+17-04-24 14:16:38,914 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 14:16:38,914 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 14:17:13,908 ClientHandlerThread INFO  read length : 7
+17-04-24 14:17:13,909 ClientHandlerThread DEBUG STX=02
+17-04-24 14:17:13,909 ClientHandlerThread DEBUG ETX=03
+17-04-24 14:17:13,910 ClientHandlerThread DEBUG LEN=3
+17-04-24 14:17:13,910 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 14:17:13,911 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 14:17:13,911 ClientHandlerThread DEBUG CMD=00
+17-04-24 14:17:13,912 ClientHandlerThread INFO  Echo 수신
+17-04-24 14:17:13,913 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 14:17:13,914 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 14:17:40,588 ClientHandlerThread INFO  Connected client size : 0
+17-04-24 14:17:40,588 ClientHandlerThread INFO  Client is closed

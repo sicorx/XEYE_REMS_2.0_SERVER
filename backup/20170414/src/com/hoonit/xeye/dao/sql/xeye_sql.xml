@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="XEYE">
+    
+    <!-- 매장게이트웨이마스터 매장코드 및 GW ID 생성 -->
+    <select id="selectMaxStrCDNGWID" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+        SELECT CONCAT((CASE WHEN LENGTH(IFNULL(MAX(CAST(STR_CD AS UNSIGNED)),0)+1) = 1 THEN '0' ELSE '' END), IFNULL(MAX(CAST(STR_CD AS UNSIGNED)),0)+1) AS STR_CD
+      		  ,IFNULL(MAX(GW_ID),0)+1 AS GW_ID
+        FROM TH_STR_GW_MST
+	</select>
+	
+	<!-- 매장정보마스터 상세내역 -->
+    <select id="selectStrInfoMst" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+        SELECT A.STR_CD
+		      ,A.GW_ID
+		      ,A.GW_ADDR
+		      ,A.GW_IP
+		      ,A.GW_VENDOR
+		      ,A.GW_HW_MODEL
+		      ,A.GW_SW_VER
+		      ,A.AUTH_YN
+		      ,A.DIAGNOSIS_MODULE_TYPE
+		      ,A.USE_YN
+		      ,A.UPDATE_TIME
+		      ,A.UPDATE_SUCCESS_YN
+		      ,A.REGI_ID
+		      ,A.REGI_DTTM
+		      ,A.COMPANY_CD
+		      ,A.LOCAL_AREA_CD
+		      ,A.CONT_DEMAND_POWER
+		      ,A.SUNRISET_AREA_CD
+		      ,B.SUNRISE_TIME
+		      ,B.SUNSET_TIME
+		FROM 
+		(	
+			SELECT A.STR_CD
+			      ,A.GW_ID
+			      ,A.GW_ADDR
+			      ,A.GW_IP
+			      ,A.GW_VENDOR
+			      ,A.GW_HW_MODEL
+			      ,A.GW_SW_VER
+			      ,A.AUTH_YN
+			      ,A.DIAGNOSIS_MODULE_TYPE
+			      ,A.USE_YN
+			      ,A.UPDATE_TIME
+			      ,A.UPDATE_SUCCESS_YN
+			      ,A.REGI_ID
+			      ,A.REGI_DTTM
+			      ,B.COMPANY_CD
+			      ,B.LOCAL_AREA_CD
+			      ,B.CONT_DEMAND_POWER
+			      ,B.SUNRISET_AREA_CD
+			FROM
+			(
+				SELECT STR_CD
+				      ,GW_ID
+				      ,GW_ADDR
+				      ,GW_IP
+				      ,GW_VENDOR
+				      ,GW_HW_MODEL
+				      ,GW_SW_VER
+				      ,AUTH_YN
+				      ,DIAGNOSIS_MODULE_TYPE
+				      ,USE_YN
+				      ,UPDATE_TIME
+				      ,UPDATE_SUCCESS_YN
+				      ,REGI_ID
+				      ,REGI_DTTM
+				FROM TH_STR_GW_MST A
+				WHERE USE_YN = 'Y'
+		        AND STR_CD = #STR_CD#
+			) A
+			LEFT OUTER JOIN (
+								SELECT A.STR_CD
+								      ,A.COMPANY_CD
+								      ,A.LOCAL_AREA_CD
+								      ,A.CONT_DEMAND_POWER
+								      ,(SELECT SUNRISET_AREA_CD FROM TH_AREA_MST WHERE LOCAL_AREA_CD = A.LOCAL_AREA_CD) AS SUNRISET_AREA_CD
+								FROM TH_STR_INFO_MST A
+								WHERE A.USE_YN = 'Y'
+								AND A.STR_CD = #STR_CD#
+							) B ON A.STR_CD = B.STR_CD
+		) A
+		LEFT OUTER JOIN (
+							SELECT SUNRISET_CD
+							      ,SUNRISE_TIME
+							      ,SUNSET_TIME
+							FROM TH_SUNRISET_MST A
+							WHERE MMDD = DATE_FORMAT(NOW(), '%m%d')
+		                ) B ON A.SUNRISET_AREA_CD = B.SUNRISET_CD
+	</select>
+	
+	<!-- 일출일몰시간 상세내역 -->
+    <select id="selectSunRisetDetail" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+    	SELECT SUNRISE_TIME
+		      ,SUNSET_TIME
+		FROM
+		(
+			SELECT B.SUNRISET_AREA_CD
+			FROM
+			(
+			SELECT LOCAL_AREA_CD
+			FROM TH_STR_INFO_MST
+			WHERE USE_YN = 'Y'
+			AND STR_CD = #STR_CD#
+			) A
+			INNER JOIN TH_AREA_MST B ON A.LOCAL_AREA_CD = B.LOCAL_AREA_CD
+		) A
+		INNER JOIN (
+				   		SELECT SUNRISET_CD
+					     	  ,SUNRISE_TIME
+					      	  ,SUNSET_TIME
+						FROM TH_SUNRISET_MST A
+						WHERE MMDD = DATE_FORMAT(NOW(), '%m%d')
+				   ) B ON A.SUNRISET_AREA_CD = B.SUNRISET_CD
+    </select>
+	
+	<!-- 냉난방정책월별 목록 -->
+    <select id="selectHACPolicyMMList" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+    	SELECT MM
+    	      ,MODE
+    	FROM TH_HAC_POLICY_MM_CONF
+    	WHERE COMPANY_CD = #COMPANY_CD#
+    	ORDER BY MM ASC
+    </select>
+    
+    <!-- 냉난방권장온도 목록 -->
+    <select id="selectHACRecommTempList" parameterClass="java.util.Map" resultClass="java.util.LinkedHashMap">
+    	SELECT A.RECOMM_MM
+    	      ,A.RECOMM_TEMP
+    	FROM
+    	(
+	    	SELECT SUBSTRING_INDEX(STR_TO_DATE(YYYYMM, '%Y%m'), '-', 1) AS RECOMM_YEAR
+	    	      ,SUBSTRING_INDEX(DATE_FORMAT(STR_TO_DATE(YYYYMM, '%Y%m'), '%m-%Y'), '-', 1) AS RECOMM_MM
+	    	      ,RECOMM_TEMP
+	    	FROM TH_HAC_RECOMM_TEMP_MNT
+	    	WHERE COMPANY_CD = #COMPANY_CD#
+    	) A
+    	WHERE A.RECOMM_YEAR = DATE_FORMAT(NOW(), '%Y')
+    	ORDER BY A.RECOMM_MM ASC
+    </select>
+	
+	<!-- 매장게이트웨이마스터 등록 -->
+	<insert id="insertGWMst" parameterClass="java.util.Map">
+		<!-- 
+		INSERT INTO TH_STR_GW_MST
+		(
+		     STR_CD
+		    ,GW_ID
+		    ,GW_ADDR
+		    ,GW_IP
+		    ,GW_VENDOR
+		    ,GW_HW_MODEL
+		    ,GW_SW_VER
+		    ,AUTH_YN
+		    ,DIAGNOSIS_MODULE_TYPE
+		    ,USE_YN
+		    ,REGI_DTTM
+		)
+		VALUES
+		(
+		     #STR_CD#
+		    ,#GW_ID#
+		    ,#GW_ADDR#
+		    ,#GW_IP#
+		    ,#GW_VENDOR#
+		    ,#GW_HW_MODEL#
+		    ,#GW_SW_VER#
+		    ,#AUTH_YN#
+		    ,#DIAGNOSIS_MODULE_TYPE#
+		    ,#USE_YN#
+		    ,NOW()
+		)
+		-->
+		INSERT INTO TH_STR_GW_MST
+		(
+		     STR_CD
+		    ,GW_ID
+		    ,GW_ADDR
+		    ,GW_IP
+		    ,GW_VENDOR
+		    ,GW_HW_MODEL
+		    ,GW_SW_VER
+		    ,AUTH_YN
+		    ,DIAGNOSIS_MODULE_TYPE
+		    ,USE_YN
+		    ,REGI_DTTM
+		)
+		SELECT #STR_CD#
+		      ,#GW_ID#
+		      ,#GW_ADDR#
+		      ,#GW_IP#
+		      ,#GW_VENDOR#
+		      ,#GW_HW_MODEL#
+		      ,#GW_SW_VER#
+		      ,#AUTH_YN#
+		      ,#DIAGNOSIS_MODULE_TYPE#
+		      ,#USE_YN#
+		      ,NOW()
+		FROM DUAL
+		WHERE NOT EXISTS (
+		                 	SELECT *
+		                 	FROM TH_STR_GW_MST
+		                 	WHERE GW_ADDR = #GW_ADDR#
+		                 	AND GW_IP = #GW_IP#
+		                 )
+	</insert>
+	
+	<!-- 매장채널별전력사용량기초자료 등록 -->
+	<insert id="insertTH_STR_CHN_ELEC_USE_BASE" parameterClass="java.util.Map">
+		INSERT INTO TH_STR_CHN_ELEC_USE_BASE
+		(
+		     STR_CD
+		    ,YYYYMMDD
+		    ,HHMIN
+		    ,EP_1CH_EFT_WATAGE
+		    ,EP_1CH_5MIN_WATAGE
+		    ,EP_1CH_ACT_WATAGE
+		    ,EP_2CH_EFT_WATAGE
+		    ,EP_2CH_5MIN_WATAGE
+		    ,EP_2CH_ACT_WATAGE
+		    ,EP_3CH_EFT_WATAGE
+		    ,EP_3CH_5MIN_WATAGE
+		    ,EP_3CH_ACT_WATAGE
+		    ,EP_4CH_EFT_WATAGE
+		    ,EP_4CH_5MIN_WATAGE
+		    ,EP_4CH_ACT_WATAGE
+		    ,EP_5CH_EFT_WATAGE
+		    ,EP_5CH_5MIN_WATAGE
+		    ,EP_5CH_ACT_WATAGE
+		    ,EP_6CH_EFT_WATAGE
+		    ,EP_6CH_5MIN_WATAGE
+		    ,EP_6CH_ACT_WATAGE
+		    ,EP_7CH_R_EFT_WATAGE
+		    ,EP_7CH_R_5MIN_WATAGE
+		    ,EP_7CH_R_ACT_WATAGE
+		    ,EP_7CH_S_EFT_WATAGE
+		    ,EP_7CH_S_5MIN_WATAGE
+		    ,EP_7CH_S_ACT_WATAGE
+		    ,EP_7CH_T_EFT_WATAGE
+		    ,EP_7CH_T_5MIN_WATAGE
+		    ,EP_7CH_T_ACT_WATAGE
+		    ,EP_8CH_R_EFT_WATAGE
+		    ,EP_8CH_R_5MIN_WATAGE
+		    ,EP_8CH_R_ACT_WATAGE
+		    ,EP_8CH_S_EFT_WATAGE
+		    ,EP_8CH_S_5MIN_WATAGE
+		    ,EP_8CH_S_ACT_WATAGE
+		    ,EP_8CH_T_EFT_WATAGE
+		    ,EP_8CH_T_5MIN_WATAGE
+		    ,EP_8CH_T_ACT_WATAGE
+		    ,EP_1CH_STATUS
+		    ,EP_2CH_STATUS
+		    ,EP_3CH_STATUS
+		    ,EP_4CH_STATUS
+		    ,EP_5CH_STATUS
+		    ,EP_6CH_STATUS
+		    ,EP_7CH_R_STATUS
+		    ,EP_7CH_S_STATUS
+		    ,EP_7CH_T_STATUS
+		    ,EP_8CH_R_STATUS
+		    ,EP_8CH_S_STATUS
+		    ,EP_8CH_T_STATUS
+		    ,REGI_ID
+		    ,REGI_DTTM
+		)
+		VALUES
+		(
+		     #STR_CD#
+		    ,#YYYYMMDD#
+		    ,#HHMIN#
+		    ,#EP_1CH_EFT_WATAGE#
+		    ,#EP_1CH_5MIN_WATAGE#
+		    ,#EP_1CH_ACT_WATAGE#
+		    ,#EP_2CH_EFT_WATAGE#
+		    ,#EP_2CH_5MIN_WATAGE#
+		    ,#EP_2CH_ACT_WATAGE#
+		    ,#EP_3CH_EFT_WATAGE#
+		    ,#EP_3CH_5MIN_WATAGE#
+		    ,#EP_3CH_ACT_WATAGE#
+		    ,#EP_4CH_EFT_WATAGE#
+		    ,#EP_4CH_5MIN_WATAGE#
+		    ,#EP_4CH_ACT_WATAGE#
+		    ,#EP_5CH_EFT_WATAGE#
+		    ,#EP_5CH_5MIN_WATAGE#
+		    ,#EP_5CH_ACT_WATAGE#
+		    ,#EP_6CH_EFT_WATAGE#
+		    ,#EP_6CH_5MIN_WATAGE#
+		    ,#EP_6CH_ACT_WATAGE#
+		    ,#EP_7CH_R_EFT_WATAGE#
+		    ,#EP_7CH_R_5MIN_WATAGE#
+		    ,#EP_7CH_R_ACT_WATAGE#
+		    ,#EP_7CH_S_EFT_WATAGE#
+		    ,#EP_7CH_S_5MIN_WATAGE#
+		    ,#EP_7CH_S_ACT_WATAGE#
+		    ,#EP_7CH_T_EFT_WATAGE#
+		    ,#EP_7CH_T_5MIN_WATAGE#
+		    ,#EP_7CH_T_ACT_WATAGE#
+		    ,#EP_8CH_R_EFT_WATAGE#
+		    ,#EP_8CH_R_5MIN_WATAGE#
+		    ,#EP_8CH_R_ACT_WATAGE#
+		    ,#EP_8CH_S_EFT_WATAGE#
+		    ,#EP_8CH_S_5MIN_WATAGE#
+		    ,#EP_8CH_S_ACT_WATAGE#
+		    ,#EP_8CH_T_EFT_WATAGE#
+		    ,#EP_8CH_T_5MIN_WATAGE#
+		    ,#EP_8CH_T_ACT_WATAGE#
+		    ,#EP_1CH_STATUS#
+		    ,#EP_2CH_STATUS#
+		    ,#EP_3CH_STATUS#
+		    ,#EP_4CH_STATUS#
+		    ,#EP_5CH_STATUS#
+		    ,#EP_6CH_STATUS#
+		    ,#EP_7CH_R_STATUS#
+		    ,#EP_7CH_S_STATUS#
+		    ,#EP_7CH_T_STATUS#
+		    ,#EP_8CH_R_STATUS#
+		    ,#EP_8CH_S_STATUS#
+		    ,#EP_8CH_T_STATUS#
+		    ,#REGI_ID#
+		    ,NOW()
+		)
+	</insert>
+	
+	<!-- 매장REMS장비기초자료 등록 -->
+	<insert id="insertTH_STR_REMS_DEVICE_BASE" parameterClass="java.util.Map">
+		INSERT INTO TH_STR_REMS_DEVICE_BASE
+		(
+		     STR_CD
+		    ,YYYYMMDD
+		    ,HHMIN
+		    ,TEMON_ID
+		    ,TEMON_TYPE
+		    ,PORT_NO
+		    ,DEVICE_TYPE
+		    ,SENS_TEMP
+		    ,REGI_ID
+		    ,REGI_DTTM
+		)
+		SELECT STR_CD
+		      ,#YYYYMMDD#
+		      ,#HHMIN#
+		      ,TEMON_ID
+		      ,TEMON_TYPE
+		      ,PORT_NO
+		      ,DEVICE_TYPE
+		      ,#SENS_TEMP#
+		      ,#REGI_ID#
+		      ,NOW()
+		FROM TH_STR_REMS_DEVICE_MST
+		WHERE STR_CD = #STR_CD#
+		AND TEMON_TYPE = #TEMON_TYPE#
+		AND PORT_NO = #PORT_NO#
+	</insert>
+	
+	<!-- 매장환경센서기초자료 등록 -->
+	<insert id="insertTH_STR_SENSOR_BASE" parameterClass="java.util.Map">
+		INSERT INTO TH_STR_SENSOR_BASE
+		(
+		     STR_CD
+		    ,YYYYMMDD
+		    ,HHMIN
+		    ,SENSE_TEMP_N1
+		    ,SENSE_HUMID_N1
+		    ,SENSE_TEMP_N2
+		    ,SENSE_HUMID_N2
+		    ,SENSE_TEMP_N3
+		    ,SENSE_HUMID_N3
+		    ,SENSE_TEMP_N4
+		    ,SENSE_HUMID_N4
+		    ,SENSE_TEMP_N5
+		    ,SENSE_HUMID_N5
+		    ,SENSE_TEMP_N6
+		    ,SENSE_HUMID_N6
+		    ,SENSE_TEMP_N7
+		    ,SENSE_HUMID_N7
+		    ,SENSE_TEMP_N8
+		    ,SENSE_HUMID_N8
+		    ,SENSE_TEMP_N9
+		    ,SENSE_HUMID_N9
+		    ,T_SENSOR_SENSE_TEMP_N1
+		    ,T_SENSOR_SENSE_HUMID_N1
+		    ,T_SENSOR_SENSE_TEMP_N2
+		    ,T_SENSOR_SENSE_HUMID_N2
+		    ,T_SENSOR_SENSE_TEMP_N3
+		    ,T_SENSOR_SENSE_HUMID_N3
+		    ,T_SENSOR_SENSE_TEMP_N4
+		    ,T_SENSOR_SENSE_HUMID_N4
+		    ,T_SENSOR_SENSE_TEMP_N5
+		    ,T_SENSOR_SENSE_HUMID_N5
+		    ,T_SENSOR_SENSE_TEMP_N6
+		    ,T_SENSOR_SENSE_HUMID_N6
+		    ,T_SENSOR_SENSE_TEMP_N7
+		    ,T_SENSOR_SENSE_HUMID_N7
+		    ,T_SENSOR_SENSE_TEMP_N8
+		    ,T_SENSOR_SENSE_HUMID_N8
+		    ,T_SENSOR_SENSE_TEMP_N9
+		    ,T_SENSOR_SENSE_HUMID_N9
+		    ,HACON_STAT_CD_N1
+		    ,T_SENSOR_STAT_CD_N1
+		    ,HACON_STAT_CD_N2
+		    ,T_SENSOR_STAT_CD_N2
+		    ,HACON_STAT_CD_N3
+		    ,T_SENSOR_STAT_CD_N3
+		    ,HACON_STAT_CD_N4
+		    ,T_SENSOR_STAT_CD_N4
+		    ,HACON_STAT_CD_N5
+		    ,T_SENSOR_STAT_CD_N5
+		    ,HACON_STAT_CD_N6
+		    ,T_SENSOR_STAT_CD_N6
+		    ,HACON_STAT_CD_N7
+		    ,T_SENSOR_STAT_CD_N7
+		    ,HACON_STAT_CD_N8
+		    ,T_SENSOR_STAT_CD_N8
+		    ,HACON_STAT_CD_N9
+		    ,T_SENSOR_STAT_CD_N9
+		    ,SIGN_STAT_CD
+		    ,REGI_ID
+		    ,REGI_DTTM
+		)
+		VALUES
+		(
+			 #STR_CD#
+		    ,#YYYYMMDD#
+		    ,#HHMIN#
+		    ,#SENSE_TEMP_N1#
+		    ,#SENSE_HUMID_N1#
+		    ,#SENSE_TEMP_N2#
+		    ,#SENSE_HUMID_N2#
+		    ,#SENSE_TEMP_N3#
+		    ,#SENSE_HUMID_N3#
+		    ,#SENSE_TEMP_N4#
+		    ,#SENSE_HUMID_N4#
+		    ,#SENSE_TEMP_N5#
+		    ,#SENSE_HUMID_N5#
+		    ,#SENSE_TEMP_N6#
+		    ,#SENSE_HUMID_N6#
+		    ,#SENSE_TEMP_N7#
+		    ,#SENSE_HUMID_N7#
+		    ,#SENSE_TEMP_N8#
+		    ,#SENSE_HUMID_N8#
+		    ,#SENSE_TEMP_N9#
+		    ,#SENSE_HUMID_N9#
+		    ,#T_SENSOR_SENSE_TEMP_N1#
+		    ,#T_SENSOR_SENSE_HUMID_N1#
+		    ,#T_SENSOR_SENSE_TEMP_N2#
+		    ,#T_SENSOR_SENSE_HUMID_N2#
+		    ,#T_SENSOR_SENSE_TEMP_N3#
+		    ,#T_SENSOR_SENSE_HUMID_N3#
+		    ,#T_SENSOR_SENSE_TEMP_N4#
+		    ,#T_SENSOR_SENSE_HUMID_N4#
+		    ,#T_SENSOR_SENSE_TEMP_N5#
+		    ,#T_SENSOR_SENSE_HUMID_N5#
+		    ,#T_SENSOR_SENSE_TEMP_N6#
+		    ,#T_SENSOR_SENSE_HUMID_N6#
+		    ,#T_SENSOR_SENSE_TEMP_N7#
+		    ,#T_SENSOR_SENSE_HUMID_N7#
+		    ,#T_SENSOR_SENSE_TEMP_N8#
+		    ,#T_SENSOR_SENSE_HUMID_N8#
+		    ,#T_SENSOR_SENSE_TEMP_N9#
+		    ,#T_SENSOR_SENSE_HUMID_N9#
+		    ,#HACON_STAT_CD_N1#
+		    ,#T_SENSOR_STAT_CD_N1#
+		    ,#HACON_STAT_CD_N2#
+		    ,#T_SENSOR_STAT_CD_N2#
+		    ,#HACON_STAT_CD_N3#
+		    ,#T_SENSOR_STAT_CD_N3#
+		    ,#HACON_STAT_CD_N4#
+		    ,#T_SENSOR_STAT_CD_N4#
+		    ,#HACON_STAT_CD_N5#
+		    ,#T_SENSOR_STAT_CD_N5#
+		    ,#HACON_STAT_CD_N6#
+		    ,#T_SENSOR_STAT_CD_N6#
+		    ,#HACON_STAT_CD_N7#
+		    ,#T_SENSOR_STAT_CD_N7#
+		    ,#HACON_STAT_CD_N8#
+		    ,#T_SENSOR_STAT_CD_N8#
+		    ,#HACON_STAT_CD_N9#
+		    ,#T_SENSOR_STAT_CD_N9#
+		    ,#SIGN_STAT_CD#
+		    ,#REGI_ID#
+		    ,NOW()
+		)
+	</insert>
+	
+	<!-- 매장인버터허브상태 등록 -->
+	<insert id="insertTH_STR_INV_HUB_STATUS" parameterClass="java.util.Map">
+		INSERT INTO TH_STR_INV_HUB_STATUS
+		(
+		     STR_CD
+		    ,YYYYMMDD
+		    ,HHMIN
+		    ,HUB_ID
+		    ,PORT_NO
+		    ,DEVICE_TYPE
+		    ,FW_VER
+		    ,MODEL
+		    ,ALARM_MASK
+		    ,ALARM_SP
+		    ,ERR_CD
+		    ,OPER_MODE
+		    ,SENS_TEMP
+		    ,SENS_TEMP_CONF
+		    ,SENS_TEMP_OUT
+		    ,MAX_TEMP_ALARM_YN
+		    ,MAX_TEMP
+		    ,MIN_TEMP_ALARM_YN
+		    ,MIN_TEMP
+		    ,DEFROST_SENS_TEMP
+		    ,DEFW_OWNER
+		    ,DEFROST_TEMP_CONF
+		    ,DEFROST_TERM
+		    ,DEFROST_DELAY
+		    ,DEWATER_DELAY
+		    ,REGI_ID
+		    ,REGI_DTTM
+		)
+		SELECT STR_CD
+		      ,#YYYYMMDD#
+		      ,#HHMIN#
+		      ,HUB_ID
+		      ,PORT_NO
+		      ,DEVICE_TYPE
+		      ,(#FW_VER# * 0.01)
+		      ,#MODEL#
+		      ,#ALARM_MASK#
+		      ,#ALARM_SP#
+		      ,#ERR_CD#
+		      ,#OPER_MODE#
+		      ,TRUNCATE((#SENS_TEMP# / 10), 1)
+		      ,TRUNCATE((#SENS_TEMP_CONF# / 10), 1)
+		      ,TRUNCATE((#SENS_TEMP_OUT# / 10), 1)
+		      ,#MAX_TEMP_ALARM_YN#
+		      ,#MAX_TEMP#
+		      ,#MIN_TEMP_ALARM_YN#
+		      ,#MIN_TEMP#
+		      ,TRUNCATE((#DEFROST_SENS_TEMP# / 10), 1)
+		      ,#DEFW_OWNER#
+		      ,#DEFROST_TEMP_CONF#
+		      ,#DEFROST_TERM#
+		      ,#DEFROST_DELAY#
+		      ,#DEWATER_DELAY#
+		      ,#REGI_ID#
+		      ,NOW()
+		FROM TH_STR_INV_HUB_MST
+		WHERE STR_CD = #STR_CD#
+		AND PORT_NO = #PORT_NO#
+	</insert>
+	
+	<!-- 매장간판상태 등록 -->
+	<insert id="insertTH_STR_SIGN_STATUS" parameterClass="java.util.Map">
+		INSERT INTO TH_STR_SIGN_STATUS
+		(
+		     STR_CD
+		    ,YYYYMMDD
+		    ,HHMIN
+		    ,SIGN_STAT
+		    ,WEATHER_CD
+		    ,REGI_ID
+		    ,REGI_DTTM
+		)
+		VALUES
+		(
+			 #STR_CD#
+		    ,#YYYYMMDD#
+		    ,#HHMIN#
+		    ,#SIGN_STAT#
+		    ,0
+		    ,#REGI_ID#
+		    ,NOW()
+		)
+	</insert>
+	
+	<!-- 매장간판제어로그 등록 -->
+	<insert id="insertTH_STR_SIGN_CTRL_LOG" parameterClass="java.util.Map">
+		INSERT INTO TH_STR_SIGN_CTRL_LOG
+		(
+		     STR_CD
+		    ,YYYYMMDD
+		    ,HHMIN
+		    ,SSMS
+		    ,SIGN_STAT
+		    ,SIGN_STAT_OLD
+		    ,WEATHER_CD
+		    ,CONTROL_AGT
+		    ,REGI_ID
+		    ,REGI_DTTM
+		)
+		VALUES
+		(
+			 #STR_CD#
+		    ,#YYYYMMDD#
+		    ,#HHMIN#
+		    ,#SSMS#
+		    ,#SIGN_STAT#
+		    ,#SIGN_STAT_OLD#
+		    ,0
+		    ,#CONTROL_AGT#
+		    ,#REGI_ID#
+		    ,NOW()
+		)
+	</insert>
+	
+</sqlMap>

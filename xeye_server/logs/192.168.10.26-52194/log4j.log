@@ -1,0 +1,19 @@
+17-04-24 14:54:47,533 ClientHandlerThread INFO  Client is started
+17-04-24 14:54:47,560 ClientHandlerThread INFO  read length : 50
+17-04-24 14:54:47,561 ClientHandlerThread DEBUG STX=02
+17-04-24 14:54:47,561 ClientHandlerThread DEBUG ETX=03
+17-04-24 14:54:47,562 ClientHandlerThread DEBUG LEN=2e
+17-04-24 14:54:47,562 ClientHandlerThread DEBUG DATA CRC=10927
+17-04-24 14:54:47,563 ClientHandlerThread DEBUG CHEC CRC=10927
+17-04-24 14:54:47,563 ClientHandlerThread DEBUG CMD=01
+17-04-24 14:54:47,564 ClientHandlerThread INFO  Client 접속 정보 수신
+17-04-24 14:54:47,565 ClientHandlerThread INFO  Version=1.0
+17-04-24 14:54:47,566 ClientHandlerThread INFO  IP=192.168.10.26
+17-04-24 14:54:47,566 ClientHandlerThread INFO  MAC=B8-27-EB-F5-43-E4
+17-04-24 14:54:47,567 ClientHandlerThread INFO  STR CD=VQ139
+17-04-24 14:54:47,567 ClientHandlerThread INFO  GW ID=0
+17-04-24 14:54:47,579 ClientHandlerThread INFO  Client 접속 정보 수신 결과 전송
+17-04-24 14:54:47,581 ClientHandlerThread INFO  Write data : 02 00 4c 01 01 30 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 06 0f 10 14 00 00 65 90 00 01 01 01 01 03 03 02 02 03 03 01 01 18 18 17 16 16 16 16 16 17 18 19 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2d 50 03 
+17-04-24 14:54:47,583 ClientHandlerThread INFO  Writed data length : 80
+17-04-24 14:55:17,547 ClientHandlerThread INFO  Connected client size : 0
+17-04-24 14:55:17,548 ClientHandlerThread INFO  Client is closed

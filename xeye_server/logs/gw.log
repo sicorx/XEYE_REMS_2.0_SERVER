@@ -1,0 +1,554 @@
+17-04-21 15:18:23,831 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-21 15:18:23,854 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-21 15:26:01,526 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:51875
+17-04-21 15:26:01,541 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:29:11,390 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:51890
+17-04-21 15:29:11,393 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:31:50,142 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:51927
+17-04-21 15:31:50,145 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:33:50,996 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:51945
+17-04-21 15:33:50,999 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:35:30,894 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:51951
+17-04-21 15:35:30,896 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:37:11,564 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:51959
+17-04-21 15:37:11,566 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:38:31,238 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:51966
+17-04-21 15:38:31,261 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:39:12,019 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:51974
+17-04-21 15:39:12,022 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:41:27,339 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:51997
+17-04-21 15:41:27,341 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:42:41,450 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52005
+17-04-21 15:42:41,453 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:44:21,686 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-21 15:44:21,709 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-21 15:44:31,451 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52030
+17-04-21 15:44:31,465 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:44:35,445 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52035
+17-04-21 15:44:35,448 IFServer$ServerThread INFO  Connected client size : 2
+17-04-21 15:44:39,443 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52040
+17-04-21 15:44:39,462 IFServer$ServerThread INFO  Connected client size : 3
+17-04-21 15:44:48,447 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52046
+17-04-21 15:44:48,450 IFServer$ServerThread INFO  Connected client size : 4
+17-04-21 15:45:03,439 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52051
+17-04-21 15:45:03,442 IFServer$ServerThread INFO  Connected client size : 5
+17-04-21 15:45:04,441 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52056
+17-04-21 15:45:04,445 IFServer$ServerThread INFO  Connected client size : 6
+17-04-21 15:45:05,440 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52061
+17-04-21 15:45:05,443 IFServer$ServerThread INFO  Connected client size : 7
+17-04-21 15:45:06,437 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52066
+17-04-21 15:45:06,440 IFServer$ServerThread INFO  Connected client size : 8
+17-04-21 15:45:12,437 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52071
+17-04-21 15:45:12,439 IFServer$ServerThread INFO  Connected client size : 9
+17-04-21 15:45:20,446 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52077
+17-04-21 15:45:20,449 IFServer$ServerThread INFO  Connected client size : 10
+17-04-21 15:46:51,907 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-21 15:46:51,929 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-21 15:46:58,092 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52099
+17-04-21 15:46:58,108 IFServer$ServerThread INFO  Connected client size : 1
+17-04-21 15:46:58,161 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52104
+17-04-21 15:46:58,164 IFServer$ServerThread INFO  Connected client size : 2
+17-04-21 15:46:58,192 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52109
+17-04-21 15:46:58,196 IFServer$ServerThread INFO  Connected client size : 3
+17-04-21 15:46:59,077 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52114
+17-04-21 15:46:59,080 IFServer$ServerThread INFO  Connected client size : 4
+17-04-21 15:46:59,211 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52119
+17-04-21 15:46:59,214 IFServer$ServerThread INFO  Connected client size : 5
+17-04-21 15:46:59,246 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52124
+17-04-21 15:46:59,249 IFServer$ServerThread INFO  Connected client size : 6
+17-04-21 15:47:00,091 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52129
+17-04-21 15:47:00,094 IFServer$ServerThread INFO  Connected client size : 7
+17-04-21 15:47:00,161 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52134
+17-04-21 15:47:00,164 IFServer$ServerThread INFO  Connected client size : 8
+17-04-21 15:47:00,189 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52139
+17-04-21 15:47:00,192 IFServer$ServerThread INFO  Connected client size : 9
+17-04-21 15:47:00,229 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52144
+17-04-21 15:47:00,232 IFServer$ServerThread INFO  Connected client size : 10
+17-04-21 15:47:00,251 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52149
+17-04-21 15:47:00,254 IFServer$ServerThread INFO  Connected client size : 11
+17-04-21 15:47:00,255 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52152
+17-04-21 15:47:00,260 IFServer$ServerThread INFO  Connected client size : 12
+17-04-21 15:47:01,070 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52159
+17-04-21 15:47:01,075 IFServer$ServerThread INFO  Connected client size : 13
+17-04-21 15:47:02,213 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52164
+17-04-21 15:47:02,216 IFServer$ServerThread INFO  Connected client size : 14
+17-04-21 15:47:02,231 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52169
+17-04-21 15:47:02,234 IFServer$ServerThread INFO  Connected client size : 15
+17-04-21 15:47:02,249 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52174
+17-04-21 15:47:02,252 IFServer$ServerThread INFO  Connected client size : 16
+17-04-21 15:47:03,073 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52179
+17-04-21 15:47:03,078 IFServer$ServerThread INFO  Connected client size : 17
+17-04-21 15:47:03,248 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52184
+17-04-21 15:47:03,251 IFServer$ServerThread INFO  Connected client size : 18
+17-04-21 15:47:04,118 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52189
+17-04-21 15:47:04,121 IFServer$ServerThread INFO  Connected client size : 19
+17-04-21 15:47:04,137 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52194
+17-04-21 15:47:04,140 IFServer$ServerThread INFO  Connected client size : 20
+17-04-21 15:47:04,148 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52199
+17-04-21 15:47:04,151 IFServer$ServerThread INFO  Connected client size : 21
+17-04-21 15:47:04,204 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52204
+17-04-21 15:47:04,207 IFServer$ServerThread INFO  Connected client size : 22
+17-04-21 15:47:04,207 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52207
+17-04-21 15:47:04,210 IFServer$ServerThread INFO  Connected client size : 23
+17-04-21 15:47:04,225 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52214
+17-04-21 15:47:04,227 IFServer$ServerThread INFO  Connected client size : 24
+17-04-21 15:47:04,234 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52219
+17-04-21 15:47:04,236 IFServer$ServerThread INFO  Connected client size : 25
+17-04-21 15:47:04,269 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52224
+17-04-21 15:47:04,271 IFServer$ServerThread INFO  Connected client size : 26
+17-04-21 15:47:05,141 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52229
+17-04-21 15:47:05,145 IFServer$ServerThread INFO  Connected client size : 27
+17-04-21 15:47:05,145 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52232
+17-04-21 15:47:05,148 IFServer$ServerThread INFO  Connected client size : 28
+17-04-21 15:47:05,156 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52239
+17-04-21 15:47:05,159 IFServer$ServerThread INFO  Connected client size : 29
+17-04-21 15:47:05,258 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52244
+17-04-21 15:47:05,261 IFServer$ServerThread INFO  Connected client size : 30
+17-04-21 15:47:07,230 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52250
+17-04-21 15:47:07,234 IFServer$ServerThread INFO  Connected client size : 31
+17-04-21 15:47:07,245 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52255
+17-04-21 15:47:07,247 IFServer$ServerThread INFO  Connected client size : 32
+17-04-21 15:47:08,167 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52260
+17-04-21 15:47:08,170 IFServer$ServerThread INFO  Connected client size : 33
+17-04-21 15:47:08,246 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52265
+17-04-21 15:47:08,249 IFServer$ServerThread INFO  Connected client size : 34
+17-04-21 15:47:09,119 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52270
+17-04-21 15:47:09,122 IFServer$ServerThread INFO  Connected client size : 35
+17-04-21 15:47:09,146 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52275
+17-04-21 15:47:09,149 IFServer$ServerThread INFO  Connected client size : 36
+17-04-21 15:47:09,203 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52280
+17-04-21 15:47:09,205 IFServer$ServerThread INFO  Connected client size : 37
+17-04-21 15:47:09,219 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52285
+17-04-21 15:47:09,222 IFServer$ServerThread INFO  Connected client size : 38
+17-04-21 15:47:10,257 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52291
+17-04-21 15:47:10,261 IFServer$ServerThread INFO  Connected client size : 39
+17-04-21 15:47:11,151 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52297
+17-04-21 15:47:11,155 IFServer$ServerThread INFO  Connected client size : 40
+17-04-21 15:47:11,174 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52302
+17-04-21 15:47:11,177 IFServer$ServerThread INFO  Connected client size : 41
+17-04-21 15:47:11,255 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52307
+17-04-21 15:47:11,258 IFServer$ServerThread INFO  Connected client size : 42
+17-04-21 15:47:11,262 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52312
+17-04-21 15:47:11,266 IFServer$ServerThread INFO  Connected client size : 43
+17-04-21 15:47:12,136 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52318
+17-04-21 15:47:12,139 IFServer$ServerThread INFO  Connected client size : 44
+17-04-21 15:47:12,180 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52323
+17-04-21 15:47:12,183 IFServer$ServerThread INFO  Connected client size : 45
+17-04-21 15:47:12,276 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52328
+17-04-21 15:47:12,279 IFServer$ServerThread INFO  Connected client size : 46
+17-04-21 15:47:13,181 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52335
+17-04-21 15:47:13,184 IFServer$ServerThread INFO  Connected client size : 47
+17-04-21 15:47:13,218 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52340
+17-04-21 15:47:13,226 IFServer$ServerThread INFO  Connected client size : 48
+17-04-21 15:47:13,275 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52348
+17-04-21 15:47:13,278 IFServer$ServerThread INFO  Connected client size : 49
+17-04-21 15:47:14,127 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52353
+17-04-21 15:47:14,130 IFServer$ServerThread INFO  Connected client size : 50
+17-04-21 15:47:15,169 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52359
+17-04-21 15:47:15,172 IFServer$ServerThread INFO  Connected client size : 51
+17-04-21 15:47:15,207 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52364
+17-04-21 15:47:15,210 IFServer$ServerThread INFO  Connected client size : 52
+17-04-21 15:47:15,244 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52369
+17-04-21 15:47:15,247 IFServer$ServerThread INFO  Connected client size : 53
+17-04-21 15:47:15,260 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52374
+17-04-21 15:47:15,262 IFServer$ServerThread INFO  Connected client size : 54
+17-04-21 15:47:16,127 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52379
+17-04-21 15:47:16,130 IFServer$ServerThread INFO  Connected client size : 55
+17-04-21 15:47:16,134 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52384
+17-04-21 15:47:16,136 IFServer$ServerThread INFO  Connected client size : 56
+17-04-21 15:47:16,183 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52389
+17-04-21 15:47:16,186 IFServer$ServerThread INFO  Connected client size : 57
+17-04-21 15:47:16,196 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52394
+17-04-21 15:47:16,198 IFServer$ServerThread INFO  Connected client size : 58
+17-04-21 15:47:17,075 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52399
+17-04-21 15:47:17,077 IFServer$ServerThread INFO  Connected client size : 59
+17-04-21 15:47:17,186 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52404
+17-04-21 15:47:17,190 IFServer$ServerThread INFO  Connected client size : 60
+17-04-21 15:47:17,190 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52406
+17-04-21 15:47:17,193 IFServer$ServerThread INFO  Connected client size : 61
+17-04-21 15:47:17,199 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52414
+17-04-21 15:47:17,202 IFServer$ServerThread INFO  Connected client size : 62
+17-04-21 15:47:17,208 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52419
+17-04-21 15:47:17,211 IFServer$ServerThread INFO  Connected client size : 63
+17-04-21 15:47:17,234 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52424
+17-04-21 15:47:17,236 IFServer$ServerThread INFO  Connected client size : 64
+17-04-21 15:47:17,270 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52429
+17-04-21 15:47:17,272 IFServer$ServerThread INFO  Connected client size : 65
+17-04-21 15:47:17,276 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52434
+17-04-21 15:47:17,278 IFServer$ServerThread INFO  Connected client size : 66
+17-04-21 15:47:18,253 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52439
+17-04-21 15:47:18,256 IFServer$ServerThread INFO  Connected client size : 67
+17-04-21 15:47:18,256 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52442
+17-04-21 15:47:18,258 IFServer$ServerThread INFO  Connected client size : 68
+17-04-21 15:47:19,098 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52449
+17-04-21 15:47:19,101 IFServer$ServerThread INFO  Connected client size : 69
+17-04-21 15:47:19,124 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52454
+17-04-21 15:47:19,126 IFServer$ServerThread INFO  Connected client size : 70
+17-04-21 15:47:19,139 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52459
+17-04-21 15:47:19,141 IFServer$ServerThread INFO  Connected client size : 71
+17-04-21 15:47:19,189 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52464
+17-04-21 15:47:19,191 IFServer$ServerThread INFO  Connected client size : 72
+17-04-21 15:47:19,193 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52468
+17-04-21 15:47:19,195 IFServer$ServerThread INFO  Connected client size : 73
+17-04-21 15:47:19,209 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52474
+17-04-21 15:47:19,212 IFServer$ServerThread INFO  Connected client size : 74
+17-04-21 15:47:19,252 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52479
+17-04-21 15:47:19,254 IFServer$ServerThread INFO  Connected client size : 75
+17-04-21 15:47:19,261 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52484
+17-04-21 15:47:19,264 IFServer$ServerThread INFO  Connected client size : 76
+17-04-21 15:47:20,225 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52489
+17-04-21 15:47:20,229 IFServer$ServerThread INFO  Connected client size : 77
+17-04-21 15:47:20,229 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52492
+17-04-21 15:47:20,232 IFServer$ServerThread INFO  Connected client size : 78
+17-04-21 15:47:20,277 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52499
+17-04-21 15:47:20,280 IFServer$ServerThread INFO  Connected client size : 79
+17-04-21 15:47:20,280 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52502
+17-04-21 15:47:20,282 IFServer$ServerThread INFO  Connected client size : 80
+17-04-21 15:47:22,119 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52509
+17-04-21 15:47:22,122 IFServer$ServerThread INFO  Connected client size : 81
+17-04-21 15:47:22,170 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52514
+17-04-21 15:47:22,172 IFServer$ServerThread INFO  Connected client size : 82
+17-04-21 15:47:22,211 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52519
+17-04-21 15:47:22,214 IFServer$ServerThread INFO  Connected client size : 83
+17-04-21 15:47:22,269 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52524
+17-04-21 15:47:22,272 IFServer$ServerThread INFO  Connected client size : 84
+17-04-21 15:47:23,120 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52529
+17-04-21 15:47:23,123 IFServer$ServerThread INFO  Connected client size : 85
+17-04-21 15:47:23,154 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52534
+17-04-21 15:47:23,157 IFServer$ServerThread INFO  Connected client size : 86
+17-04-21 15:47:23,159 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52539
+17-04-21 15:47:23,161 IFServer$ServerThread INFO  Connected client size : 87
+17-04-21 15:47:23,164 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52544
+17-04-21 15:47:23,166 IFServer$ServerThread INFO  Connected client size : 88
+17-04-21 15:47:23,238 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52549
+17-04-21 15:47:23,240 IFServer$ServerThread INFO  Connected client size : 89
+17-04-21 15:47:24,070 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52554
+17-04-21 15:47:24,073 IFServer$ServerThread INFO  Connected client size : 90
+17-04-21 15:47:24,194 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52559
+17-04-21 15:47:24,196 IFServer$ServerThread INFO  Connected client size : 91
+17-04-21 15:47:24,220 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52564
+17-04-21 15:47:24,223 IFServer$ServerThread INFO  Connected client size : 92
+17-04-21 15:47:25,080 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52569
+17-04-21 15:47:25,083 IFServer$ServerThread INFO  Connected client size : 93
+17-04-21 15:47:25,145 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52574
+17-04-21 15:47:25,147 IFServer$ServerThread INFO  Connected client size : 94
+17-04-21 15:47:25,159 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52579
+17-04-21 15:47:25,162 IFServer$ServerThread INFO  Connected client size : 95
+17-04-21 15:47:25,183 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52584
+17-04-21 15:47:25,186 IFServer$ServerThread INFO  Connected client size : 96
+17-04-21 15:47:25,226 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52589
+17-04-21 15:47:25,229 IFServer$ServerThread INFO  Connected client size : 97
+17-04-21 15:47:25,237 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52594
+17-04-21 15:47:25,240 IFServer$ServerThread INFO  Connected client size : 98
+17-04-21 15:47:25,243 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52599
+17-04-21 15:47:25,245 IFServer$ServerThread INFO  Connected client size : 99
+17-04-21 15:47:27,112 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52604
+17-04-21 15:47:27,115 IFServer$ServerThread INFO  Connected client size : 100
+17-04-21 15:47:27,142 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52609
+17-04-21 15:47:27,144 IFServer$ServerThread INFO  Connected client size : 101
+17-04-21 15:47:27,215 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52614
+17-04-21 15:47:27,218 IFServer$ServerThread INFO  Connected client size : 102
+17-04-21 15:47:27,248 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52619
+17-04-21 15:47:27,250 IFServer$ServerThread INFO  Connected client size : 103
+17-04-21 15:47:28,134 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52624
+17-04-21 15:47:28,136 IFServer$ServerThread INFO  Connected client size : 104
+17-04-21 15:47:28,172 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52629
+17-04-21 15:47:28,175 IFServer$ServerThread INFO  Connected client size : 105
+17-04-21 15:47:28,208 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52634
+17-04-21 15:47:28,210 IFServer$ServerThread INFO  Connected client size : 106
+17-04-21 15:47:29,279 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52639
+17-04-21 15:47:29,282 IFServer$ServerThread INFO  Connected client size : 107
+17-04-21 15:47:30,118 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52644
+17-04-21 15:47:30,121 IFServer$ServerThread INFO  Connected client size : 108
+17-04-21 15:47:30,125 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52649
+17-04-21 15:47:30,127 IFServer$ServerThread INFO  Connected client size : 109
+17-04-21 15:47:30,202 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52654
+17-04-21 15:47:30,204 IFServer$ServerThread INFO  Connected client size : 110
+17-04-21 15:47:30,272 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52659
+17-04-21 15:47:30,275 IFServer$ServerThread INFO  Connected client size : 111
+17-04-21 15:47:31,147 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52664
+17-04-21 15:47:31,150 IFServer$ServerThread INFO  Connected client size : 112
+17-04-21 15:47:31,171 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52669
+17-04-21 15:47:31,173 IFServer$ServerThread INFO  Connected client size : 113
+17-04-21 15:47:31,184 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52674
+17-04-21 15:47:31,186 IFServer$ServerThread INFO  Connected client size : 114
+17-04-21 15:47:31,189 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52679
+17-04-21 15:47:31,191 IFServer$ServerThread INFO  Connected client size : 115
+17-04-21 15:47:31,231 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52684
+17-04-21 15:47:31,234 IFServer$ServerThread INFO  Connected client size : 116
+17-04-21 15:47:31,240 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52689
+17-04-21 15:47:31,243 IFServer$ServerThread INFO  Connected client size : 117
+17-04-21 15:47:31,271 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52694
+17-04-21 15:47:31,274 IFServer$ServerThread INFO  Connected client size : 118
+17-04-21 15:47:32,163 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52699
+17-04-21 15:47:32,172 IFServer$ServerThread INFO  Connected client size : 119
+17-04-21 15:47:32,229 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52704
+17-04-21 15:47:32,231 IFServer$ServerThread INFO  Connected client size : 120
+17-04-21 15:47:32,270 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52709
+17-04-21 15:47:32,273 IFServer$ServerThread INFO  Connected client size : 121
+17-04-21 15:47:33,076 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52714
+17-04-21 15:47:33,078 IFServer$ServerThread INFO  Connected client size : 122
+17-04-21 15:47:33,172 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52719
+17-04-21 15:47:33,175 IFServer$ServerThread INFO  Connected client size : 123
+17-04-21 15:47:33,213 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52724
+17-04-21 15:47:33,219 IFServer$ServerThread INFO  Connected client size : 124
+17-04-21 15:47:33,219 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52726
+17-04-21 15:47:33,221 IFServer$ServerThread INFO  Connected client size : 125
+17-04-21 15:47:33,263 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52734
+17-04-21 15:47:33,265 IFServer$ServerThread INFO  Connected client size : 126
+17-04-21 15:47:34,078 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52739
+17-04-21 15:47:34,081 IFServer$ServerThread INFO  Connected client size : 127
+17-04-21 15:47:34,147 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52744
+17-04-21 15:47:34,149 IFServer$ServerThread INFO  Connected client size : 128
+17-04-21 15:47:34,156 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52749
+17-04-21 15:47:34,158 IFServer$ServerThread INFO  Connected client size : 129
+17-04-21 15:47:34,166 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52754
+17-04-21 15:47:34,168 IFServer$ServerThread INFO  Connected client size : 130
+17-04-21 15:47:34,240 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52759
+17-04-21 15:47:34,243 IFServer$ServerThread INFO  Connected client size : 131
+17-04-21 15:47:35,120 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52764
+17-04-21 15:47:35,122 IFServer$ServerThread INFO  Connected client size : 132
+17-04-21 15:47:35,140 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52769
+17-04-21 15:47:35,142 IFServer$ServerThread INFO  Connected client size : 133
+17-04-21 15:47:35,156 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52774
+17-04-21 15:47:35,158 IFServer$ServerThread INFO  Connected client size : 134
+17-04-21 15:47:35,200 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52779
+17-04-21 15:47:35,203 IFServer$ServerThread INFO  Connected client size : 135
+17-04-21 15:47:35,264 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52784
+17-04-21 15:47:35,267 IFServer$ServerThread INFO  Connected client size : 136
+17-04-21 15:47:36,181 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52789
+17-04-21 15:47:36,184 IFServer$ServerThread INFO  Connected client size : 137
+17-04-21 15:47:37,098 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52795
+17-04-21 15:47:37,100 IFServer$ServerThread INFO  Connected client size : 138
+17-04-21 15:47:37,122 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52800
+17-04-21 15:47:37,124 IFServer$ServerThread INFO  Connected client size : 139
+17-04-21 15:47:37,173 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52805
+17-04-21 15:47:37,176 IFServer$ServerThread INFO  Connected client size : 140
+17-04-21 15:47:38,090 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52810
+17-04-21 15:47:38,093 IFServer$ServerThread INFO  Connected client size : 141
+17-04-21 15:47:38,137 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52815
+17-04-21 15:47:38,140 IFServer$ServerThread INFO  Connected client size : 142
+17-04-21 15:47:38,207 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52820
+17-04-21 15:47:38,209 IFServer$ServerThread INFO  Connected client size : 143
+17-04-21 15:47:39,111 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52825
+17-04-21 15:47:39,114 IFServer$ServerThread INFO  Connected client size : 144
+17-04-21 15:47:39,149 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52830
+17-04-21 15:47:39,151 IFServer$ServerThread INFO  Connected client size : 145
+17-04-21 15:47:40,081 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52838
+17-04-21 15:47:40,084 IFServer$ServerThread INFO  Connected client size : 146
+17-04-21 15:47:40,175 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52843
+17-04-21 15:47:40,178 IFServer$ServerThread INFO  Connected client size : 147
+17-04-21 15:47:40,197 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52848
+17-04-21 15:47:40,199 IFServer$ServerThread INFO  Connected client size : 148
+17-04-21 15:47:40,240 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52853
+17-04-21 15:47:40,244 IFServer$ServerThread INFO  Connected client size : 149
+17-04-21 15:47:40,266 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52858
+17-04-21 15:47:40,269 IFServer$ServerThread INFO  Connected client size : 150
+17-04-21 15:47:40,281 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52863
+17-04-21 15:47:40,283 IFServer$ServerThread INFO  Connected client size : 151
+17-04-21 15:47:41,270 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52868
+17-04-21 15:47:41,273 IFServer$ServerThread INFO  Connected client size : 152
+17-04-21 15:47:42,165 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52873
+17-04-21 15:47:42,168 IFServer$ServerThread INFO  Connected client size : 153
+17-04-21 15:47:43,092 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52878
+17-04-21 15:47:43,095 IFServer$ServerThread INFO  Connected client size : 154
+17-04-21 15:47:43,143 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52883
+17-04-21 15:47:43,146 IFServer$ServerThread INFO  Connected client size : 155
+17-04-21 15:47:43,156 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52888
+17-04-21 15:47:43,158 IFServer$ServerThread INFO  Connected client size : 156
+17-04-21 15:47:43,185 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52893
+17-04-21 15:47:43,187 IFServer$ServerThread INFO  Connected client size : 157
+17-04-21 15:47:43,242 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52898
+17-04-21 15:47:43,244 IFServer$ServerThread INFO  Connected client size : 158
+17-04-21 15:47:43,251 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52903
+17-04-21 15:47:43,253 IFServer$ServerThread INFO  Connected client size : 159
+17-04-21 15:47:44,085 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52908
+17-04-21 15:47:44,088 IFServer$ServerThread INFO  Connected client size : 160
+17-04-21 15:47:44,176 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52913
+17-04-21 15:47:44,178 IFServer$ServerThread INFO  Connected client size : 161
+17-04-21 15:47:44,218 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52918
+17-04-21 15:47:44,220 IFServer$ServerThread INFO  Connected client size : 162
+17-04-21 15:47:45,191 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52923
+17-04-21 15:47:45,194 IFServer$ServerThread INFO  Connected client size : 163
+17-04-21 15:47:45,201 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52928
+17-04-21 15:47:45,203 IFServer$ServerThread INFO  Connected client size : 164
+17-04-21 15:47:46,122 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52933
+17-04-21 15:47:46,124 IFServer$ServerThread INFO  Connected client size : 165
+17-04-21 15:47:46,126 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52936
+17-04-21 15:47:46,128 IFServer$ServerThread INFO  Connected client size : 166
+17-04-21 15:47:47,127 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52943
+17-04-21 15:47:47,129 IFServer$ServerThread INFO  Connected client size : 167
+17-04-21 15:47:48,219 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52951
+17-04-21 15:47:48,231 IFServer$ServerThread INFO  Connected client size : 168
+17-04-21 15:47:48,232 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52954
+17-04-21 15:47:48,236 IFServer$ServerThread INFO  Connected client size : 169
+17-04-21 15:47:48,274 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52961
+17-04-21 15:47:48,277 IFServer$ServerThread INFO  Connected client size : 170
+17-04-21 15:47:49,179 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52967
+17-04-21 15:47:49,182 IFServer$ServerThread INFO  Connected client size : 171
+17-04-21 15:47:49,218 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52972
+17-04-21 15:47:49,221 IFServer$ServerThread INFO  Connected client size : 172
+17-04-21 15:47:50,168 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52978
+17-04-21 15:47:50,171 IFServer$ServerThread INFO  Connected client size : 173
+17-04-21 15:47:50,259 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52983
+17-04-21 15:47:50,262 IFServer$ServerThread INFO  Connected client size : 174
+17-04-21 15:47:51,235 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52988
+17-04-21 15:47:51,237 IFServer$ServerThread INFO  Connected client size : 175
+17-04-21 15:47:51,238 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52991
+17-04-21 15:47:51,240 IFServer$ServerThread INFO  Connected client size : 176
+17-04-21 15:47:51,244 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:52998
+17-04-21 15:47:51,246 IFServer$ServerThread INFO  Connected client size : 177
+17-04-21 15:47:52,151 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53003
+17-04-21 15:47:52,153 IFServer$ServerThread INFO  Connected client size : 178
+17-04-21 15:47:52,234 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53008
+17-04-21 15:47:52,237 IFServer$ServerThread INFO  Connected client size : 179
+17-04-21 15:47:52,276 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53013
+17-04-21 15:47:52,279 IFServer$ServerThread INFO  Connected client size : 180
+17-04-21 15:47:53,083 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53018
+17-04-21 15:47:53,086 IFServer$ServerThread INFO  Connected client size : 181
+17-04-21 15:47:53,152 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53023
+17-04-21 15:47:53,155 IFServer$ServerThread INFO  Connected client size : 182
+17-04-21 15:47:53,212 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53028
+17-04-21 15:47:53,214 IFServer$ServerThread INFO  Connected client size : 183
+17-04-21 15:47:53,216 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53032
+17-04-21 15:47:53,218 IFServer$ServerThread INFO  Connected client size : 184
+17-04-21 15:47:53,226 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53038
+17-04-21 15:47:53,229 IFServer$ServerThread INFO  Connected client size : 185
+17-04-21 15:47:54,068 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53043
+17-04-21 15:47:54,070 IFServer$ServerThread INFO  Connected client size : 186
+17-04-21 15:47:54,137 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53048
+17-04-21 15:47:54,140 IFServer$ServerThread INFO  Connected client size : 187
+17-04-21 15:47:54,185 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53053
+17-04-21 15:47:54,188 IFServer$ServerThread INFO  Connected client size : 188
+17-04-21 15:47:54,248 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53058
+17-04-21 15:47:54,251 IFServer$ServerThread INFO  Connected client size : 189
+17-04-21 15:47:54,252 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53062
+17-04-21 15:47:54,255 IFServer$ServerThread INFO  Connected client size : 190
+17-04-21 15:47:55,099 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53068
+17-04-21 15:47:55,101 IFServer$ServerThread INFO  Connected client size : 191
+17-04-21 15:47:55,165 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53073
+17-04-21 15:47:55,170 IFServer$ServerThread INFO  Connected client size : 192
+17-04-21 15:47:55,192 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53078
+17-04-21 15:47:55,195 IFServer$ServerThread INFO  Connected client size : 193
+17-04-21 15:47:55,267 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53083
+17-04-21 15:47:55,270 IFServer$ServerThread INFO  Connected client size : 194
+17-04-21 15:47:56,151 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53088
+17-04-21 15:47:56,154 IFServer$ServerThread INFO  Connected client size : 195
+17-04-21 15:47:56,241 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53093
+17-04-21 15:47:56,244 IFServer$ServerThread INFO  Connected client size : 196
+17-04-21 15:47:57,086 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53098
+17-04-21 15:47:57,089 IFServer$ServerThread INFO  Connected client size : 197
+17-04-21 15:47:57,160 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53103
+17-04-21 15:47:57,163 IFServer$ServerThread INFO  Connected client size : 198
+17-04-21 15:47:57,225 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53108
+17-04-21 15:47:57,228 IFServer$ServerThread INFO  Connected client size : 199
+17-04-21 15:47:57,283 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.21:53113
+17-04-21 15:47:57,286 IFServer$ServerThread INFO  Connected client size : 200
+17-04-21 15:49:46,184 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34412
+17-04-21 15:49:46,186 IFServer$ServerThread INFO  Connected client size : 201
+17-04-21 15:55:31,619 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34414
+17-04-21 15:55:31,622 IFServer$ServerThread INFO  Connected client size : 201
+17-04-21 16:39:12,688 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-21 16:39:12,718 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 10:50:08,206 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 10:50:08,233 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 10:50:11,264 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34170
+17-04-24 10:50:11,276 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 10:50:39,333 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34172
+17-04-24 10:50:39,336 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 10:50:55,339 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34174
+17-04-24 10:50:55,342 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 10:50:57,343 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34176
+17-04-24 10:50:57,346 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 10:51:39,358 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34178
+17-04-24 10:51:39,361 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 10:52:47,752 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34180
+17-04-24 10:52:47,755 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 10:53:09,582 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 10:53:09,607 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 10:53:26,186 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34182
+17-04-24 10:53:26,199 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 10:54:11,437 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 10:54:11,459 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 10:54:19,000 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:34184
+17-04-24 10:54:19,014 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 11:09:53,135 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 11:09:53,158 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 11:11:25,439 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 11:11:25,462 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 11:11:26,294 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.27:46406
+17-04-24 11:11:26,309 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 11:37:04,536 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 11:37:04,560 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 11:37:20,053 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52164
+17-04-24 11:37:20,067 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 11:37:29,742 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52166
+17-04-24 11:37:29,746 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 11:57:21,774 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 11:57:21,797 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 11:58:28,300 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52168
+17-04-24 11:58:28,313 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 12:06:02,284 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52170
+17-04-24 12:06:02,287 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 12:10:38,769 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 12:10:38,792 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 12:11:18,332 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52172
+17-04-24 12:11:18,346 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 12:18:58,151 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 12:18:58,173 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 12:20:27,708 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52174
+17-04-24 12:20:27,721 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 12:42:39,157 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52176
+17-04-24 12:42:39,160 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:06:55,530 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52178
+17-04-24 14:06:55,533 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:09:56,109 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 14:09:56,131 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 14:10:54,194 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52180
+17-04-24 14:10:54,208 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:15:38,108 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 14:15:38,131 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 14:16:06,380 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52182
+17-04-24 14:16:06,392 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:17:45,843 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 14:17:45,869 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 14:17:58,036 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 14:17:58,058 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 14:18:20,345 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52184
+17-04-24 14:18:20,357 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:22:08,610 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 14:22:08,638 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 14:22:21,182 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52186
+17-04-24 14:22:21,197 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:25:41,750 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 14:25:41,774 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 14:26:15,601 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52188
+17-04-24 14:26:15,614 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:31:06,979 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 14:31:07,003 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 14:31:43,034 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52190
+17-04-24 14:31:43,046 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:46:26,407 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 14:46:26,430 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 14:46:45,059 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52192
+17-04-24 14:46:45,071 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:54:47,530 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52194
+17-04-24 14:54:47,533 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 14:56:45,918 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 14:56:45,940 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 14:57:38,195 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52196
+17-04-24 14:57:38,208 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 15:00:34,003 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52198
+17-04-24 15:00:34,006 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 16:07:09,585 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52200
+17-04-24 16:07:09,588 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 16:12:14,240 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 16:12:14,268 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 16:13:08,982 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52202
+17-04-24 16:13:08,997 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 16:17:59,251 IFServer$ServerThread INFO  IF Server is started with 192.168.10.21:12100
+17-04-24 16:17:59,273 IFServer$ServerThread INFO  IF Server waiting for accept
+17-04-24 16:18:17,919 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52204
+17-04-24 16:18:17,934 IFServer$ServerThread INFO  Connected client size : 1
+17-04-24 16:19:34,096 IFServer$ServerThread INFO  IF Server accepted client : /192.168.10.26:52206
+17-04-24 16:19:34,099 IFServer$ServerThread INFO  Connected client size : 1

@@ -1,0 +1,394 @@
+17-04-24 16:19:34,099 ClientHandlerThread INFO  Client is started
+17-04-24 16:19:34,151 ClientHandlerThread INFO  read length : 50
+17-04-24 16:19:34,152 ClientHandlerThread DEBUG STX=02
+17-04-24 16:19:34,152 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:19:34,153 ClientHandlerThread DEBUG LEN=2e
+17-04-24 16:19:34,153 ClientHandlerThread DEBUG DATA CRC=10927
+17-04-24 16:19:34,154 ClientHandlerThread DEBUG CHEC CRC=10927
+17-04-24 16:19:34,154 ClientHandlerThread DEBUG CMD=01
+17-04-24 16:19:34,155 ClientHandlerThread INFO  Client 접속 정보 수신
+17-04-24 16:19:34,156 ClientHandlerThread INFO  Version=1.0
+17-04-24 16:19:34,156 ClientHandlerThread INFO  IP=192.168.10.26
+17-04-24 16:19:34,157 ClientHandlerThread INFO  MAC=B8-27-EB-F5-43-E4
+17-04-24 16:19:34,157 ClientHandlerThread INFO  STR CD=VQ139
+17-04-24 16:19:34,158 ClientHandlerThread INFO  GW ID=0
+17-04-24 16:19:34,171 ClientHandlerThread INFO  Client 접속 정보 수신 결과 전송
+17-04-24 16:19:34,172 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:19:34,172 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:19:34,173 ClientHandlerThread INFO  Write data : 02 00 4c 01 01 30 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 06 0f 10 14 00 00 65 90 00 01 01 01 01 03 03 02 02 03 03 01 01 18 18 17 16 16 16 16 16 17 18 19 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2d 50 03 
+17-04-24 16:19:34,175 ClientHandlerThread INFO  Writed data length : 80
+17-04-24 16:19:40,501 ClientHandlerThread INFO  Write data : 02 00 1a 08 30 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 01 61 80 03 
+17-04-24 16:19:40,502 ClientHandlerThread INFO  Writed data length : 30
+17-04-24 16:19:44,711 ClientHandlerThread INFO  read length : 40
+17-04-24 16:19:44,712 ClientHandlerThread DEBUG STX=02
+17-04-24 16:19:44,712 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:19:44,713 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:19:44,713 ClientHandlerThread DEBUG DATA CRC=-18376
+17-04-24 16:19:44,714 ClientHandlerThread DEBUG CHEC CRC=-18376
+17-04-24 16:19:44,714 ClientHandlerThread DEBUG CMD=08
+17-04-24 16:19:44,715 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:19:44,716 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:19:44,716 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:19:44,717 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:19:44,717 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:19:44,717 ClientHandlerThread INFO  년=2017
+17-04-24 16:19:44,718 ClientHandlerThread INFO  월=4
+17-04-24 16:19:44,719 ClientHandlerThread INFO  일=24
+17-04-24 16:19:44,720 ClientHandlerThread INFO  시=16
+17-04-24 16:19:44,721 ClientHandlerThread INFO  분=20
+17-04-24 16:19:44,722 ClientHandlerThread INFO  초=21
+17-04-24 16:19:44,723 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:19:44,723 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:19:44,724 ClientHandlerThread INFO  제어주체=1
+17-04-24 16:20:13,804 ClientHandlerThread INFO  read length : 7
+17-04-24 16:20:13,804 ClientHandlerThread DEBUG STX=02
+17-04-24 16:20:13,805 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:20:13,805 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:20:13,806 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:20:13,806 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:20:13,807 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:20:13,807 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:20:13,808 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:20:13,809 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:20:21,955 ClientHandlerThread INFO  read length : 40
+17-04-24 16:20:21,956 ClientHandlerThread DEBUG STX=02
+17-04-24 16:20:21,957 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:20:21,957 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:20:21,957 ClientHandlerThread DEBUG DATA CRC=14735
+17-04-24 16:20:21,958 ClientHandlerThread DEBUG CHEC CRC=14735
+17-04-24 16:20:21,958 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:20:21,959 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:20:21,959 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:20:21,960 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:20:21,960 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:20:21,961 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:20:21,961 ClientHandlerThread INFO  년=2017
+17-04-24 16:20:21,962 ClientHandlerThread INFO  월=4
+17-04-24 16:20:21,964 ClientHandlerThread INFO  일=24
+17-04-24 16:20:21,964 ClientHandlerThread INFO  시=16
+17-04-24 16:20:21,965 ClientHandlerThread INFO  분=21
+17-04-24 16:20:21,966 ClientHandlerThread INFO  초=0
+17-04-24 16:20:21,966 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:20:21,967 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:20:21,968 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:20:21,968 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:20:21,970 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:20:21,970 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:20:53,797 ClientHandlerThread INFO  read length : 7
+17-04-24 16:20:53,798 ClientHandlerThread DEBUG STX=02
+17-04-24 16:20:53,798 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:20:53,799 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:20:53,800 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:20:53,800 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:20:53,800 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:20:53,801 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:20:53,802 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:20:53,803 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:21:22,112 ClientHandlerThread INFO  read length : 40
+17-04-24 16:21:22,113 ClientHandlerThread DEBUG STX=02
+17-04-24 16:21:22,113 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:21:22,114 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:21:22,114 ClientHandlerThread DEBUG DATA CRC=-10403
+17-04-24 16:21:22,115 ClientHandlerThread DEBUG CHEC CRC=-10403
+17-04-24 16:21:22,115 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:21:22,116 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:21:22,116 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:21:22,117 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:21:22,117 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:21:22,117 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:21:22,118 ClientHandlerThread INFO  년=2017
+17-04-24 16:21:22,119 ClientHandlerThread INFO  월=4
+17-04-24 16:21:22,119 ClientHandlerThread INFO  일=24
+17-04-24 16:21:22,120 ClientHandlerThread INFO  시=16
+17-04-24 16:21:22,122 ClientHandlerThread INFO  분=22
+17-04-24 16:21:22,122 ClientHandlerThread INFO  초=0
+17-04-24 16:21:22,123 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:21:22,123 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:21:22,124 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:21:22,125 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:21:22,126 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:21:22,127 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:21:53,793 ClientHandlerThread INFO  read length : 7
+17-04-24 16:21:53,793 ClientHandlerThread DEBUG STX=02
+17-04-24 16:21:53,794 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:21:53,794 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:21:53,794 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:21:53,795 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:21:53,795 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:21:53,796 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:21:53,797 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:21:53,797 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:22:21,948 ClientHandlerThread INFO  read length : 40
+17-04-24 16:22:21,949 ClientHandlerThread DEBUG STX=02
+17-04-24 16:22:21,949 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:22:21,949 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:22:21,950 ClientHandlerThread DEBUG DATA CRC=32012
+17-04-24 16:22:21,950 ClientHandlerThread DEBUG CHEC CRC=32012
+17-04-24 16:22:21,950 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:22:21,950 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:22:21,951 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:22:21,951 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:22:21,952 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:22:21,952 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:22:21,953 ClientHandlerThread INFO  년=2017
+17-04-24 16:22:21,953 ClientHandlerThread INFO  월=4
+17-04-24 16:22:21,954 ClientHandlerThread INFO  일=24
+17-04-24 16:22:21,954 ClientHandlerThread INFO  시=16
+17-04-24 16:22:21,955 ClientHandlerThread INFO  분=23
+17-04-24 16:22:21,956 ClientHandlerThread INFO  초=0
+17-04-24 16:22:21,956 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:22:21,957 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:22:21,958 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:22:21,958 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:22:21,960 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:22:21,961 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:22:53,793 ClientHandlerThread INFO  read length : 7
+17-04-24 16:22:53,794 ClientHandlerThread DEBUG STX=02
+17-04-24 16:22:53,794 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:22:53,795 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:22:53,795 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:22:53,795 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:22:53,796 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:22:53,796 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:22:53,797 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:22:53,798 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:23:22,019 ClientHandlerThread INFO  read length : 40
+17-04-24 16:23:22,020 ClientHandlerThread DEBUG STX=02
+17-04-24 16:23:22,020 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:23:22,021 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:23:22,021 ClientHandlerThread DEBUG DATA CRC=6389
+17-04-24 16:23:22,021 ClientHandlerThread DEBUG CHEC CRC=6389
+17-04-24 16:23:22,022 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:23:22,022 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:23:22,023 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:23:22,023 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:23:22,024 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:23:22,024 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:23:22,025 ClientHandlerThread INFO  년=2017
+17-04-24 16:23:22,025 ClientHandlerThread INFO  월=4
+17-04-24 16:23:22,026 ClientHandlerThread INFO  일=24
+17-04-24 16:23:22,026 ClientHandlerThread INFO  시=16
+17-04-24 16:23:22,028 ClientHandlerThread INFO  분=24
+17-04-24 16:23:22,028 ClientHandlerThread INFO  초=0
+17-04-24 16:23:22,029 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:23:22,030 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:23:22,030 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:23:22,031 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:23:22,033 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:23:22,033 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:23:53,797 ClientHandlerThread INFO  read length : 7
+17-04-24 16:23:53,798 ClientHandlerThread DEBUG STX=02
+17-04-24 16:23:53,798 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:23:53,798 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:23:53,799 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:23:53,799 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:23:53,799 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:23:53,800 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:23:53,801 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:23:53,802 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:24:22,139 ClientHandlerThread INFO  read length : 40
+17-04-24 16:24:22,140 ClientHandlerThread DEBUG STX=02
+17-04-24 16:24:22,140 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:24:22,140 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:24:22,141 ClientHandlerThread DEBUG DATA CRC=-19804
+17-04-24 16:24:22,141 ClientHandlerThread DEBUG CHEC CRC=-19804
+17-04-24 16:24:22,142 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:24:22,142 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:24:22,143 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:24:22,143 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:24:22,144 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:24:22,144 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:24:22,145 ClientHandlerThread INFO  년=2017
+17-04-24 16:24:22,145 ClientHandlerThread INFO  월=4
+17-04-24 16:24:22,146 ClientHandlerThread INFO  일=24
+17-04-24 16:24:22,147 ClientHandlerThread INFO  시=16
+17-04-24 16:24:22,147 ClientHandlerThread INFO  분=25
+17-04-24 16:24:22,148 ClientHandlerThread INFO  초=0
+17-04-24 16:24:22,149 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:24:22,149 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:24:22,150 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:24:22,151 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:24:22,152 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:24:22,153 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:24:53,800 ClientHandlerThread INFO  read length : 7
+17-04-24 16:24:53,800 ClientHandlerThread DEBUG STX=02
+17-04-24 16:24:53,801 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:24:53,801 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:24:53,801 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:24:53,802 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:24:53,802 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:24:53,802 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:24:53,804 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:24:53,804 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:25:22,122 ClientHandlerThread INFO  read length : 40
+17-04-24 16:25:22,122 ClientHandlerThread DEBUG STX=02
+17-04-24 16:25:22,123 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:25:22,123 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:25:22,124 ClientHandlerThread DEBUG DATA CRC=23670
+17-04-24 16:25:22,124 ClientHandlerThread DEBUG CHEC CRC=23670
+17-04-24 16:25:22,124 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:25:22,125 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:25:22,125 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:25:22,126 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:25:22,126 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:25:22,127 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:25:22,127 ClientHandlerThread INFO  년=2017
+17-04-24 16:25:22,128 ClientHandlerThread INFO  월=4
+17-04-24 16:25:22,128 ClientHandlerThread INFO  일=24
+17-04-24 16:25:22,129 ClientHandlerThread INFO  시=16
+17-04-24 16:25:22,130 ClientHandlerThread INFO  분=26
+17-04-24 16:25:22,131 ClientHandlerThread INFO  초=0
+17-04-24 16:25:22,133 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:25:22,133 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:25:22,134 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:25:22,135 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:25:22,136 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:25:22,137 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:25:53,789 ClientHandlerThread INFO  read length : 7
+17-04-24 16:25:53,790 ClientHandlerThread DEBUG STX=02
+17-04-24 16:25:53,790 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:25:53,791 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:25:53,791 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:25:53,792 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:25:53,792 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:25:53,792 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:25:53,794 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:25:53,794 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:26:22,099 ClientHandlerThread INFO  read length : 40
+17-04-24 16:26:22,099 ClientHandlerThread DEBUG STX=02
+17-04-24 16:26:22,100 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:26:22,100 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:26:22,101 ClientHandlerThread DEBUG DATA CRC=-2521
+17-04-24 16:26:22,101 ClientHandlerThread DEBUG CHEC CRC=-2521
+17-04-24 16:26:22,102 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:26:22,102 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:26:22,103 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:26:22,103 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:26:22,104 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:26:22,104 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:26:22,105 ClientHandlerThread INFO  년=2017
+17-04-24 16:26:22,105 ClientHandlerThread INFO  월=4
+17-04-24 16:26:22,106 ClientHandlerThread INFO  일=24
+17-04-24 16:26:22,107 ClientHandlerThread INFO  시=16
+17-04-24 16:26:22,107 ClientHandlerThread INFO  분=27
+17-04-24 16:26:22,108 ClientHandlerThread INFO  초=0
+17-04-24 16:26:22,109 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:26:22,110 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:26:22,110 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:26:22,111 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:26:22,112 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:26:22,113 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:26:53,789 ClientHandlerThread INFO  read length : 7
+17-04-24 16:26:53,789 ClientHandlerThread DEBUG STX=02
+17-04-24 16:26:53,790 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:26:53,790 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:26:53,790 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:26:53,791 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:26:53,791 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:26:53,792 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:26:53,793 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:26:53,793 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:27:22,167 ClientHandlerThread INFO  read length : 40
+17-04-24 16:27:22,167 ClientHandlerThread DEBUG STX=02
+17-04-24 16:27:22,168 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:27:22,168 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:27:22,169 ClientHandlerThread DEBUG DATA CRC=-28173
+17-04-24 16:27:22,169 ClientHandlerThread DEBUG CHEC CRC=-28173
+17-04-24 16:27:22,169 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:27:22,170 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:27:22,170 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:27:22,171 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:27:22,171 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:27:22,172 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:27:22,172 ClientHandlerThread INFO  년=2017
+17-04-24 16:27:22,173 ClientHandlerThread INFO  월=4
+17-04-24 16:27:22,174 ClientHandlerThread INFO  일=24
+17-04-24 16:27:22,174 ClientHandlerThread INFO  시=16
+17-04-24 16:27:22,175 ClientHandlerThread INFO  분=28
+17-04-24 16:27:22,176 ClientHandlerThread INFO  초=0
+17-04-24 16:27:22,176 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:27:22,177 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:27:22,178 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:27:22,178 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:27:22,180 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:27:22,181 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:27:53,796 ClientHandlerThread INFO  read length : 7
+17-04-24 16:27:53,797 ClientHandlerThread DEBUG STX=02
+17-04-24 16:27:53,797 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:27:53,797 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:27:53,798 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:27:53,798 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:27:53,799 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:27:53,799 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:27:53,800 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:27:53,801 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:28:22,047 ClientHandlerThread INFO  read length : 40
+17-04-24 16:28:22,047 ClientHandlerThread DEBUG STX=02
+17-04-24 16:28:22,048 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:28:22,048 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:28:22,049 ClientHandlerThread DEBUG DATA CRC=15266
+17-04-24 16:28:22,049 ClientHandlerThread DEBUG CHEC CRC=15266
+17-04-24 16:28:22,049 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:28:22,050 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:28:22,050 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:28:22,051 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:28:22,051 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:28:22,051 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:28:22,052 ClientHandlerThread INFO  년=2017
+17-04-24 16:28:22,053 ClientHandlerThread INFO  월=4
+17-04-24 16:28:22,053 ClientHandlerThread INFO  일=24
+17-04-24 16:28:22,054 ClientHandlerThread INFO  시=16
+17-04-24 16:28:22,054 ClientHandlerThread INFO  분=29
+17-04-24 16:28:22,055 ClientHandlerThread INFO  초=0
+17-04-24 16:28:22,056 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:28:22,056 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:28:22,057 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:28:22,058 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:28:22,059 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:28:22,060 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:28:53,787 ClientHandlerThread INFO  read length : 7
+17-04-24 16:28:53,787 ClientHandlerThread DEBUG STX=02
+17-04-24 16:28:53,788 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:28:53,788 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:28:53,788 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:28:53,789 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:28:53,789 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:28:53,789 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:28:53,791 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:28:53,792 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:29:22,209 ClientHandlerThread INFO  read length : 40
+17-04-24 16:29:22,210 ClientHandlerThread DEBUG STX=02
+17-04-24 16:29:22,210 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:29:22,211 ClientHandlerThread DEBUG LEN=24
+17-04-24 16:29:22,211 ClientHandlerThread DEBUG DATA CRC=-10896
+17-04-24 16:29:22,212 ClientHandlerThread DEBUG CHEC CRC=-10896
+17-04-24 16:29:22,212 ClientHandlerThread DEBUG CMD=09
+17-04-24 16:29:22,212 ClientHandlerThread INFO  간판제어전송 결과 수신
+17-04-24 16:29:22,212 ClientHandlerThread INFO  RESULT=1
+17-04-24 16:29:22,212 ClientHandlerThread INFO  SUCCESS
+17-04-24 16:29:22,213 ClientHandlerThread INFO  STR CD=01
+17-04-24 16:29:22,213 ClientHandlerThread INFO  GW ID=1
+17-04-24 16:29:22,213 ClientHandlerThread INFO  년=2017
+17-04-24 16:29:22,213 ClientHandlerThread INFO  월=4
+17-04-24 16:29:22,214 ClientHandlerThread INFO  일=24
+17-04-24 16:29:22,214 ClientHandlerThread INFO  시=16
+17-04-24 16:29:22,214 ClientHandlerThread INFO  분=30
+17-04-24 16:29:22,214 ClientHandlerThread INFO  초=0
+17-04-24 16:29:22,215 ClientHandlerThread INFO  기존상태=0
+17-04-24 16:29:22,215 ClientHandlerThread INFO  현재상태=0
+17-04-24 16:29:22,215 ClientHandlerThread INFO  제어주체=0
+17-04-24 16:29:22,215 ClientHandlerThread INFO  간판제어결과 수신 응답 전송
+17-04-24 16:29:22,216 ClientHandlerThread INFO  Write data : 02 00 04 09 01 aa b9 03 
+17-04-24 16:29:22,217 ClientHandlerThread INFO  Writed data length : 8
+17-04-24 16:29:53,794 ClientHandlerThread INFO  read length : 7
+17-04-24 16:29:53,794 ClientHandlerThread DEBUG STX=02
+17-04-24 16:29:53,794 ClientHandlerThread DEBUG ETX=03
+17-04-24 16:29:53,795 ClientHandlerThread DEBUG LEN=3
+17-04-24 16:29:53,795 ClientHandlerThread DEBUG DATA CRC=0
+17-04-24 16:29:53,795 ClientHandlerThread DEBUG CHEC CRC=0
+17-04-24 16:29:53,795 ClientHandlerThread DEBUG CMD=00
+17-04-24 16:29:53,796 ClientHandlerThread INFO  Echo 수신
+17-04-24 16:29:53,796 ClientHandlerThread INFO  Write data : 02 00 03 00 00 00 03 
+17-04-24 16:29:53,797 ClientHandlerThread INFO  Writed data length : 7
+17-04-24 16:30:13,075 ClientHandlerThread INFO  Connected client size : 0
+17-04-24 16:30:13,075 ClientHandlerThread INFO  Client is closed
